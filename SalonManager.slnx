@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="SalonManager.Datos/SalonManager.Datos.csproj" />
+  <Project Path="SalonManager.Negocios/SalonManager.Negocios.csproj" />
+  <Project Path="SalonManager.UI/SalonManager.UI.csproj" />
+</Solution>
