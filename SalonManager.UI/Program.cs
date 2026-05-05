@@ -27,14 +27,12 @@ namespace SalonManager.UI
             // 4. Construir el proveedor
             ServiceProvider = services.BuildServiceProvider();
 
-            // 5. Crear la BD si no existe
-            using (var scope = ServiceProvider.CreateScope())
-            {
-                var db = scope.ServiceProvider.GetRequiredService<SalonDbContext>();
-                db.Database.EnsureCreated();
-            }
+            // 5. Crear la BD y abrir el formulario en el mismo scope
+            using var appScope = ServiceProvider.CreateScope();
+            var db = appScope.ServiceProvider.GetRequiredService<SalonDbContext>();
+            db.Database.EnsureCreated();
 
-            Application.Run(new Form1());
+            Application.Run(new FormInventario(db));
         }
     }
 }
