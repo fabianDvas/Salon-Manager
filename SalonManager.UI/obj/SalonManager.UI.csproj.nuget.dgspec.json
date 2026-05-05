@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Fabian\\Documents\\Lenguaje de programación 1\\SalonManager\\SalonManager.UI\\SalonManager.UI.csproj": {}
+    "C:\\Users\\Erickson\\Desktop\\Salon-Manager\\SalonManager.UI\\SalonManager.UI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Fabian\\Documents\\Lenguaje de programación 1\\SalonManager\\SalonManager.Datos\\SalonManager.Datos.csproj": {
+    "C:\\Users\\Erickson\\Desktop\\Salon-Manager\\SalonManager.Datos\\SalonManager.Datos.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Fabian\\Documents\\Lenguaje de programación 1\\SalonManager\\SalonManager.Datos\\SalonManager.Datos.csproj",
+        "projectUniqueName": "C:\\Users\\Erickson\\Desktop\\Salon-Manager\\SalonManager.Datos\\SalonManager.Datos.csproj",
         "projectName": "SalonManager.Datos",
-        "projectPath": "C:\\Users\\Fabian\\Documents\\Lenguaje de programación 1\\SalonManager\\SalonManager.Datos\\SalonManager.Datos.csproj",
-        "packagesPath": "C:\\Users\\Fabian\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Fabian\\Documents\\Lenguaje de programación 1\\SalonManager\\SalonManager.Datos\\obj\\",
+        "projectPath": "C:\\Users\\Erickson\\Desktop\\Salon-Manager\\SalonManager.Datos\\SalonManager.Datos.csproj",
+        "packagesPath": "C:\\Users\\Erickson\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Erickson\\Desktop\\Salon-Manager\\SalonManager.Datos\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Fabian\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Erickson\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -30,7 +26,6 @@
         },
         "frameworks": {
           "net10.0": {
-            "framework": "net10.0",
             "targetAlias": "net10.0",
             "projectReferences": {}
           }
@@ -49,7 +44,6 @@
       },
       "frameworks": {
         "net10.0": {
-          "framework": "net10.0",
           "targetAlias": "net10.0",
           "dependencies": {
             "Microsoft.EntityFrameworkCore.Design": {
@@ -85,7 +79,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.202/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.203/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",
@@ -363,21 +357,17 @@
         }
       }
     },
-    "C:\\Users\\Fabian\\Documents\\Lenguaje de programación 1\\SalonManager\\SalonManager.Negocios\\SalonManager.Negocios.csproj": {
+    "C:\\Users\\Erickson\\Desktop\\Salon-Manager\\SalonManager.Negocios\\SalonManager.Negocios.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Fabian\\Documents\\Lenguaje de programación 1\\SalonManager\\SalonManager.Negocios\\SalonManager.Negocios.csproj",
+        "projectUniqueName": "C:\\Users\\Erickson\\Desktop\\Salon-Manager\\SalonManager.Negocios\\SalonManager.Negocios.csproj",
         "projectName": "SalonManager.Negocios",
-        "projectPath": "C:\\Users\\Fabian\\Documents\\Lenguaje de programación 1\\SalonManager\\SalonManager.Negocios\\SalonManager.Negocios.csproj",
-        "packagesPath": "C:\\Users\\Fabian\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Fabian\\Documents\\Lenguaje de programación 1\\SalonManager\\SalonManager.Negocios\\obj\\",
+        "projectPath": "C:\\Users\\Erickson\\Desktop\\Salon-Manager\\SalonManager.Negocios\\SalonManager.Negocios.csproj",
+        "packagesPath": "C:\\Users\\Erickson\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Erickson\\Desktop\\Salon-Manager\\SalonManager.Negocios\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Fabian\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Erickson\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -389,11 +379,10 @@
         },
         "frameworks": {
           "net10.0": {
-            "framework": "net10.0",
             "targetAlias": "net10.0",
             "projectReferences": {
-              "C:\\Users\\Fabian\\Documents\\Lenguaje de programación 1\\SalonManager\\SalonManager.Datos\\SalonManager.Datos.csproj": {
-                "projectPath": "C:\\Users\\Fabian\\Documents\\Lenguaje de programación 1\\SalonManager\\SalonManager.Datos\\SalonManager.Datos.csproj"
+              "C:\\Users\\Erickson\\Desktop\\Salon-Manager\\SalonManager.Datos\\SalonManager.Datos.csproj": {
+                "projectPath": "C:\\Users\\Erickson\\Desktop\\Salon-Manager\\SalonManager.Datos\\SalonManager.Datos.csproj"
               }
             }
           }
@@ -412,7 +401,6 @@
       },
       "frameworks": {
         "net10.0": {
-          "framework": "net10.0",
           "targetAlias": "net10.0",
           "imports": [
             "net461",
@@ -430,7 +418,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.202/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.203/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",
@@ -708,21 +696,17 @@
         }
       }
     },
-    "C:\\Users\\Fabian\\Documents\\Lenguaje de programación 1\\SalonManager\\SalonManager.UI\\SalonManager.UI.csproj": {
+    "C:\\Users\\Erickson\\Desktop\\Salon-Manager\\SalonManager.UI\\SalonManager.UI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Fabian\\Documents\\Lenguaje de programación 1\\SalonManager\\SalonManager.UI\\SalonManager.UI.csproj",
+        "projectUniqueName": "C:\\Users\\Erickson\\Desktop\\Salon-Manager\\SalonManager.UI\\SalonManager.UI.csproj",
         "projectName": "SalonManager.UI",
-        "projectPath": "C:\\Users\\Fabian\\Documents\\Lenguaje de programación 1\\SalonManager\\SalonManager.UI\\SalonManager.UI.csproj",
-        "packagesPath": "C:\\Users\\Fabian\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Fabian\\Documents\\Lenguaje de programación 1\\SalonManager\\SalonManager.UI\\obj\\",
+        "projectPath": "C:\\Users\\Erickson\\Desktop\\Salon-Manager\\SalonManager.UI\\SalonManager.UI.csproj",
+        "packagesPath": "C:\\Users\\Erickson\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Erickson\\Desktop\\Salon-Manager\\SalonManager.UI\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Fabian\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Erickson\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -733,15 +717,14 @@
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net10.0-windows": {
-            "framework": "net10.0-windows7.0",
+          "net10.0-windows7.0": {
             "targetAlias": "net10.0-windows",
             "projectReferences": {
-              "C:\\Users\\Fabian\\Documents\\Lenguaje de programación 1\\SalonManager\\SalonManager.Datos\\SalonManager.Datos.csproj": {
-                "projectPath": "C:\\Users\\Fabian\\Documents\\Lenguaje de programación 1\\SalonManager\\SalonManager.Datos\\SalonManager.Datos.csproj"
+              "C:\\Users\\Erickson\\Desktop\\Salon-Manager\\SalonManager.Datos\\SalonManager.Datos.csproj": {
+                "projectPath": "C:\\Users\\Erickson\\Desktop\\Salon-Manager\\SalonManager.Datos\\SalonManager.Datos.csproj"
               },
-              "C:\\Users\\Fabian\\Documents\\Lenguaje de programación 1\\SalonManager\\SalonManager.Negocios\\SalonManager.Negocios.csproj": {
-                "projectPath": "C:\\Users\\Fabian\\Documents\\Lenguaje de programación 1\\SalonManager\\SalonManager.Negocios\\SalonManager.Negocios.csproj"
+              "C:\\Users\\Erickson\\Desktop\\Salon-Manager\\SalonManager.Negocios\\SalonManager.Negocios.csproj": {
+                "projectPath": "C:\\Users\\Erickson\\Desktop\\Salon-Manager\\SalonManager.Negocios\\SalonManager.Negocios.csproj"
               }
             }
           }
@@ -759,8 +742,7 @@
         "SdkAnalysisLevel": "10.0.200"
       },
       "frameworks": {
-        "net10.0-windows": {
-          "framework": "net10.0-windows7.0",
+        "net10.0-windows7.0": {
           "targetAlias": "net10.0-windows",
           "dependencies": {
             "Microsoft.EntityFrameworkCore.Design": {
@@ -789,7 +771,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.202/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.203/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",
