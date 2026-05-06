@@ -15,7 +15,7 @@ namespace SalonManager.UI
         private readonly InventarioServicio _servicio;
         private readonly Producto? _productoExistente;
 
-        // Si producto es null estamos agregando, si tiene valor estamos editando
+        // Si el producto es null esta agregando, si tiene valor esta editando
         public FormProducto(Producto? producto, InventarioServicio servicio)
         {
             InitializeComponent();
@@ -48,7 +48,7 @@ namespace SalonManager.UI
             }
         }
 
-        private async void btnGuardar_Click(object sender, EventArgs e)
+        private async void btnGuardar_Click_1(object sender, EventArgs e)
         {
             // Validaciones
             if (string.IsNullOrWhiteSpace(txtNombre.Text))
@@ -103,7 +103,7 @@ namespace SalonManager.UI
             Close();
         }
 
-        private void btnCancelar_Click(object sender, EventArgs e)
+        private void btnCancelar_Click_1(object sender, EventArgs e)
         {
             DialogResult = DialogResult.Cancel;
             Close();
