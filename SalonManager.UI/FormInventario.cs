@@ -60,14 +60,14 @@ namespace SalonManager.UI
             lblAlerta.ForeColor = bajos.Count > 0 ? Color.Red : Color.Green;
         }
 
-        private async void btnAgregar_Click(object sender, EventArgs e)
+        private async void btnAgregar_Click_1(object sender, EventArgs e)
         {
             var form = new FormProducto(null, _servicio);
             if (form.ShowDialog() == DialogResult.OK)
                 await CargarProductosAsync();
         }
 
-        private async void btnEditar_Click(object sender, EventArgs e)
+        private async void btnEditar_Click_1(object sender, EventArgs e)
         {
             if (dgvProductos.CurrentRow == null) return;
 
@@ -79,7 +79,7 @@ namespace SalonManager.UI
                 await CargarProductosAsync();
         }
 
-        private async void btnEliminar_Click(object sender, EventArgs e)
+        private async void btnEliminar_Click_1(object sender, EventArgs e)
         {
             if (dgvProductos.CurrentRow == null) return;
 
@@ -101,7 +101,7 @@ namespace SalonManager.UI
             }
         }
 
-        private async void btnStockBajo_Click(object sender, EventArgs e)
+        private async void btnStockBajo_Click_1(object sender, EventArgs e)
         {
             var bajos = await _servicio.ObtenerStockBajoAsync();
 
@@ -120,6 +120,5 @@ namespace SalonManager.UI
                 MessageBoxButtons.OK,
                 MessageBoxIcon.Warning);
         }
-
     }
 }

@@ -59,6 +59,7 @@
             btnStockBajo.TabIndex = 1;
             btnStockBajo.Text = "Ver Stock Bajo";
             btnStockBajo.UseVisualStyleBackColor = false;
+            btnStockBajo.Click += btnStockBajo_Click_1;
             // 
             // dgvProductos
             // 
@@ -84,6 +85,7 @@
             btnAgregar.TabIndex = 3;
             btnAgregar.Text = "Agregar";
             btnAgregar.UseVisualStyleBackColor = false;
+            btnAgregar.Click += btnAgregar_Click_1;
             // 
             // btnEditar
             // 
@@ -97,6 +99,7 @@
             btnEditar.TabIndex = 4;
             btnEditar.Text = "Editar";
             btnEditar.UseVisualStyleBackColor = false;
+            btnEditar.Click += btnEditar_Click_1;
             // 
             // btnEliminar
             // 
@@ -110,6 +113,7 @@
             btnEliminar.TabIndex = 5;
             btnEliminar.Text = "Eliminar";
             btnEliminar.UseVisualStyleBackColor = false;
+            btnEliminar.Click += btnEliminar_Click_1;
             // 
             // FormInventario
             // 

@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\Erickson\\Desktop\\Salon-Manager\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{D979BFF1-37A0-FB27-A325-E61F65C4A908}|SalonManager.UI\\SalonManager.UI.csproj|c:\\users\\erickson\\desktop\\salon-manager\\salonmanager.ui\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D979BFF1-37A0-FB27-A325-E61F65C4A908}|SalonManager.UI\\SalonManager.UI.csproj|solutionrelative:salonmanager.ui\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{D979BFF1-37A0-FB27-A325-E61F65C4A908}|SalonManager.UI\\SalonManager.UI.csproj|c:\\users\\erickson\\desktop\\salon-manager\\salonmanager.ui\\formproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D979BFF1-37A0-FB27-A325-E61F65C4A908}|SalonManager.UI\\SalonManager.UI.csproj|solutionrelative:salonmanager.ui\\formproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -43,19 +47,32 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Erickson\\Desktop\\Salon-Manager\\SalonManager.UI\\Program.cs",
+              "RelativeDocumentMoniker": "SalonManager.UI\\Program.cs",
+              "ToolTip": "C:\\Users\\Erickson\\Desktop\\Salon-Manager\\SalonManager.UI\\Program.cs",
+              "RelativeToolTip": "SalonManager.UI\\Program.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAAACUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-05T18:20:59.598Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "FormProducto.cs",
               "DocumentMoniker": "C:\\Users\\Erickson\\Desktop\\Salon-Manager\\SalonManager.UI\\FormProducto.cs",
               "RelativeDocumentMoniker": "SalonManager.UI\\FormProducto.cs",
               "ToolTip": "C:\\Users\\Erickson\\Desktop\\Salon-Manager\\SalonManager.UI\\FormProducto.cs",
               "RelativeToolTip": "SalonManager.UI\\FormProducto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-05T18:00:25.152Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "FormProducto.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\Erickson\\Desktop\\Salon-Manager\\SalonManager.UI\\FormProducto.cs",
               "RelativeDocumentMoniker": "SalonManager.UI\\FormProducto.cs",
@@ -67,7 +84,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "FormInventario.cs",
               "DocumentMoniker": "C:\\Users\\Erickson\\Desktop\\Salon-Manager\\SalonManager.UI\\FormInventario.cs",
               "RelativeDocumentMoniker": "SalonManager.UI\\FormInventario.cs",
@@ -80,7 +97,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "FormInventario.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\Erickson\\Desktop\\Salon-Manager\\SalonManager.UI\\FormInventario.cs",
               "RelativeDocumentMoniker": "SalonManager.UI\\FormInventario.cs",
