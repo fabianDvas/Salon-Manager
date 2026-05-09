@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Erickson\\Desktop\\Salon-Manager\\SalonManager.Datos\\SalonManager.Datos.csproj": {}
+    "C:\\Users\\omar\\source\\repos\\Salon-Manager\\SalonManager.Datos\\SalonManager.Datos.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Erickson\\Desktop\\Salon-Manager\\SalonManager.Datos\\SalonManager.Datos.csproj": {
+    "C:\\Users\\omar\\source\\repos\\Salon-Manager\\SalonManager.Datos\\SalonManager.Datos.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Erickson\\Desktop\\Salon-Manager\\SalonManager.Datos\\SalonManager.Datos.csproj",
+        "projectUniqueName": "C:\\Users\\omar\\source\\repos\\Salon-Manager\\SalonManager.Datos\\SalonManager.Datos.csproj",
         "projectName": "SalonManager.Datos",
-        "projectPath": "C:\\Users\\Erickson\\Desktop\\Salon-Manager\\SalonManager.Datos\\SalonManager.Datos.csproj",
-        "packagesPath": "C:\\Users\\Erickson\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Erickson\\Desktop\\Salon-Manager\\SalonManager.Datos\\obj\\",
+        "projectPath": "C:\\Users\\omar\\source\\repos\\Salon-Manager\\SalonManager.Datos\\SalonManager.Datos.csproj",
+        "packagesPath": "C:\\Users\\omar\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\omar\\source\\repos\\Salon-Manager\\SalonManager.Datos\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Erickson\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\omar\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

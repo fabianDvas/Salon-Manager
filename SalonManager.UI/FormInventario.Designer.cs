@@ -41,9 +41,10 @@
             // 
             lblAlerta.AutoSize = true;
             lblAlerta.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
-            lblAlerta.Location = new Point(12, 15);
+            lblAlerta.Location = new Point(17, 25);
+            lblAlerta.Margin = new Padding(4, 0, 4, 0);
             lblAlerta.Name = "lblAlerta";
-            lblAlerta.Size = new Size(87, 19);
+            lblAlerta.Size = new Size(117, 28);
             lblAlerta.TabIndex = 0;
             lblAlerta.Text = "Cargando...";
             // 
@@ -53,9 +54,10 @@
             btnStockBajo.FlatStyle = FlatStyle.Flat;
             btnStockBajo.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             btnStockBajo.ForeColor = Color.White;
-            btnStockBajo.Location = new Point(580, 10);
+            btnStockBajo.Location = new Point(829, 17);
+            btnStockBajo.Margin = new Padding(4, 5, 4, 5);
             btnStockBajo.Name = "btnStockBajo";
-            btnStockBajo.Size = new Size(140, 35);
+            btnStockBajo.Size = new Size(200, 58);
             btnStockBajo.TabIndex = 1;
             btnStockBajo.Text = "Ver Stock Bajo";
             btnStockBajo.UseVisualStyleBackColor = false;
@@ -66,11 +68,13 @@
             dgvProductos.AllowUserToAddRows = false;
             dgvProductos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvProductos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvProductos.Location = new Point(12, 55);
+            dgvProductos.Location = new Point(17, 92);
+            dgvProductos.Margin = new Padding(4, 5, 4, 5);
             dgvProductos.Name = "dgvProductos";
             dgvProductos.ReadOnly = true;
+            dgvProductos.RowHeadersWidth = 62;
             dgvProductos.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvProductos.Size = new Size(710, 340);
+            dgvProductos.Size = new Size(1014, 567);
             dgvProductos.TabIndex = 2;
             // 
             // btnAgregar
@@ -79,9 +83,10 @@
             btnAgregar.FlatStyle = FlatStyle.Flat;
             btnAgregar.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             btnAgregar.ForeColor = Color.White;
-            btnAgregar.Location = new Point(112, 411);
+            btnAgregar.Location = new Point(160, 685);
+            btnAgregar.Margin = new Padding(4, 5, 4, 5);
             btnAgregar.Name = "btnAgregar";
-            btnAgregar.Size = new Size(120, 38);
+            btnAgregar.Size = new Size(171, 63);
             btnAgregar.TabIndex = 3;
             btnAgregar.Text = "Agregar";
             btnAgregar.UseVisualStyleBackColor = false;
@@ -93,9 +98,10 @@
             btnEditar.FlatStyle = FlatStyle.Flat;
             btnEditar.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             btnEditar.ForeColor = Color.White;
-            btnEditar.Location = new Point(305, 411);
+            btnEditar.Location = new Point(436, 685);
+            btnEditar.Margin = new Padding(4, 5, 4, 5);
             btnEditar.Name = "btnEditar";
-            btnEditar.Size = new Size(120, 38);
+            btnEditar.Size = new Size(171, 63);
             btnEditar.TabIndex = 4;
             btnEditar.Text = "Editar";
             btnEditar.UseVisualStyleBackColor = false;
@@ -107,9 +113,10 @@
             btnEliminar.FlatStyle = FlatStyle.Flat;
             btnEliminar.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             btnEliminar.ForeColor = Color.White;
-            btnEliminar.Location = new Point(491, 411);
+            btnEliminar.Location = new Point(701, 685);
+            btnEliminar.Margin = new Padding(4, 5, 4, 5);
             btnEliminar.Name = "btnEliminar";
-            btnEliminar.Size = new Size(120, 38);
+            btnEliminar.Size = new Size(171, 63);
             btnEliminar.TabIndex = 5;
             btnEliminar.Text = "Eliminar";
             btnEliminar.UseVisualStyleBackColor = false;
@@ -117,15 +124,16 @@
             // 
             // FormInventario
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(734, 461);
+            ClientSize = new Size(1049, 768);
             Controls.Add(btnEliminar);
             Controls.Add(btnEditar);
             Controls.Add(btnAgregar);
             Controls.Add(dgvProductos);
             Controls.Add(btnStockBajo);
             Controls.Add(lblAlerta);
+            Margin = new Padding(4, 5, 4, 5);
             Name = "FormInventario";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Gestión de Inventario";
