@@ -24,7 +24,11 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.TargetFrameworkIdentifier = .NETCoreApp
 build_property.TargetFrameworkVersion = v10.0
 build_property.RootNamespace = SalonManager.UI
+<<<<<<< HEAD
 build_property.ProjectDir = C:\Users\User\source\repos\Salon-Manager.git1\SalonManager.UI\
+=======
+build_property.ProjectDir = C:\Users\Erickson\Downloads\Salon-Manager\SalonManager.UI\
+>>>>>>> 0e5de1c4db933d6a034479904e3a0067cb260aa4
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.CsWinRTUseWindowsUIXamlProjections = false

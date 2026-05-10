@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "C:\\Users\\User\\source\\repos\\Salon-Manager.git1\\SalonManager.UI\\SalonManager.UI.csproj": {}
   },
   "projects": {
@@ -15,6 +16,22 @@
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+    "C:\\Users\\Erickson\\Downloads\\Salon-Manager\\SalonManager.UI\\SalonManager.UI.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Erickson\\Downloads\\Salon-Manager\\SalonManager.Datos\\SalonManager.Datos.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Erickson\\Downloads\\Salon-Manager\\SalonManager.Datos\\SalonManager.Datos.csproj",
+        "projectName": "SalonManager.Datos",
+        "projectPath": "C:\\Users\\Erickson\\Downloads\\Salon-Manager\\SalonManager.Datos\\SalonManager.Datos.csproj",
+        "packagesPath": "C:\\Users\\Erickson\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Erickson\\Downloads\\Salon-Manager\\SalonManager.Datos\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Erickson\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> 0e5de1c4db933d6a034479904e3a0067cb260aa4
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -359,6 +376,7 @@
         }
       }
     },
+<<<<<<< HEAD
     "C:\\Users\\User\\source\\repos\\Salon-Manager.git1\\SalonManager.Negocios\\SalonManager.Negocios.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -370,6 +388,19 @@
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+    "C:\\Users\\Erickson\\Downloads\\Salon-Manager\\SalonManager.Negocios\\SalonManager.Negocios.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Erickson\\Downloads\\Salon-Manager\\SalonManager.Negocios\\SalonManager.Negocios.csproj",
+        "projectName": "SalonManager.Negocios",
+        "projectPath": "C:\\Users\\Erickson\\Downloads\\Salon-Manager\\SalonManager.Negocios\\SalonManager.Negocios.csproj",
+        "packagesPath": "C:\\Users\\Erickson\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Erickson\\Downloads\\Salon-Manager\\SalonManager.Negocios\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Erickson\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> 0e5de1c4db933d6a034479904e3a0067cb260aa4
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -384,8 +415,13 @@
             "framework": "net10.0",
             "targetAlias": "net10.0",
             "projectReferences": {
+<<<<<<< HEAD
               "C:\\Users\\User\\source\\repos\\Salon-Manager.git1\\SalonManager.Datos\\SalonManager.Datos.csproj": {
                 "projectPath": "C:\\Users\\User\\source\\repos\\Salon-Manager.git1\\SalonManager.Datos\\SalonManager.Datos.csproj"
+=======
+              "C:\\Users\\Erickson\\Downloads\\Salon-Manager\\SalonManager.Datos\\SalonManager.Datos.csproj": {
+                "projectPath": "C:\\Users\\Erickson\\Downloads\\Salon-Manager\\SalonManager.Datos\\SalonManager.Datos.csproj"
+>>>>>>> 0e5de1c4db933d6a034479904e3a0067cb260aa4
               }
             }
           }
@@ -700,6 +736,7 @@
         }
       }
     },
+<<<<<<< HEAD
     "C:\\Users\\User\\source\\repos\\Salon-Manager.git1\\SalonManager.UI\\SalonManager.UI.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -711,6 +748,19 @@
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+    "C:\\Users\\Erickson\\Downloads\\Salon-Manager\\SalonManager.UI\\SalonManager.UI.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Erickson\\Downloads\\Salon-Manager\\SalonManager.UI\\SalonManager.UI.csproj",
+        "projectName": "SalonManager.UI",
+        "projectPath": "C:\\Users\\Erickson\\Downloads\\Salon-Manager\\SalonManager.UI\\SalonManager.UI.csproj",
+        "packagesPath": "C:\\Users\\Erickson\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Erickson\\Downloads\\Salon-Manager\\SalonManager.UI\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Erickson\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> 0e5de1c4db933d6a034479904e3a0067cb260aa4
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -725,11 +775,19 @@
             "framework": "net10.0-windows7.0",
             "targetAlias": "net10.0-windows",
             "projectReferences": {
+<<<<<<< HEAD
               "C:\\Users\\User\\source\\repos\\Salon-Manager.git1\\SalonManager.Datos\\SalonManager.Datos.csproj": {
                 "projectPath": "C:\\Users\\User\\source\\repos\\Salon-Manager.git1\\SalonManager.Datos\\SalonManager.Datos.csproj"
               },
               "C:\\Users\\User\\source\\repos\\Salon-Manager.git1\\SalonManager.Negocios\\SalonManager.Negocios.csproj": {
                 "projectPath": "C:\\Users\\User\\source\\repos\\Salon-Manager.git1\\SalonManager.Negocios\\SalonManager.Negocios.csproj"
+=======
+              "C:\\Users\\Erickson\\Downloads\\Salon-Manager\\SalonManager.Datos\\SalonManager.Datos.csproj": {
+                "projectPath": "C:\\Users\\Erickson\\Downloads\\Salon-Manager\\SalonManager.Datos\\SalonManager.Datos.csproj"
+              },
+              "C:\\Users\\Erickson\\Downloads\\Salon-Manager\\SalonManager.Negocios\\SalonManager.Negocios.csproj": {
+                "projectPath": "C:\\Users\\Erickson\\Downloads\\Salon-Manager\\SalonManager.Negocios\\SalonManager.Negocios.csproj"
+>>>>>>> 0e5de1c4db933d6a034479904e3a0067cb260aa4
               }
             }
           }
