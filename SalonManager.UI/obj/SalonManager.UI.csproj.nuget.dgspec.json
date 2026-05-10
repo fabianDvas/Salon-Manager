@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\omar\\source\\repos\\Salon-Manager\\SalonManager.UI\\SalonManager.UI.csproj": {}
+    "C:\\Users\\Erickson\\Downloads\\Salon-Manager\\SalonManager.UI\\SalonManager.UI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\omar\\source\\repos\\Salon-Manager\\SalonManager.Datos\\SalonManager.Datos.csproj": {
+    "C:\\Users\\Erickson\\Downloads\\Salon-Manager\\SalonManager.Datos\\SalonManager.Datos.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\omar\\source\\repos\\Salon-Manager\\SalonManager.Datos\\SalonManager.Datos.csproj",
+        "projectUniqueName": "C:\\Users\\Erickson\\Downloads\\Salon-Manager\\SalonManager.Datos\\SalonManager.Datos.csproj",
         "projectName": "SalonManager.Datos",
-        "projectPath": "C:\\Users\\omar\\source\\repos\\Salon-Manager\\SalonManager.Datos\\SalonManager.Datos.csproj",
-        "packagesPath": "C:\\Users\\omar\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\omar\\source\\repos\\Salon-Manager\\SalonManager.Datos\\obj\\",
+        "projectPath": "C:\\Users\\Erickson\\Downloads\\Salon-Manager\\SalonManager.Datos\\SalonManager.Datos.csproj",
+        "packagesPath": "C:\\Users\\Erickson\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Erickson\\Downloads\\Salon-Manager\\SalonManager.Datos\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\omar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Erickson\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -359,17 +359,17 @@
         }
       }
     },
-    "C:\\Users\\omar\\source\\repos\\Salon-Manager\\SalonManager.Negocios\\SalonManager.Negocios.csproj": {
+    "C:\\Users\\Erickson\\Downloads\\Salon-Manager\\SalonManager.Negocios\\SalonManager.Negocios.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\omar\\source\\repos\\Salon-Manager\\SalonManager.Negocios\\SalonManager.Negocios.csproj",
+        "projectUniqueName": "C:\\Users\\Erickson\\Downloads\\Salon-Manager\\SalonManager.Negocios\\SalonManager.Negocios.csproj",
         "projectName": "SalonManager.Negocios",
-        "projectPath": "C:\\Users\\omar\\source\\repos\\Salon-Manager\\SalonManager.Negocios\\SalonManager.Negocios.csproj",
-        "packagesPath": "C:\\Users\\omar\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\omar\\source\\repos\\Salon-Manager\\SalonManager.Negocios\\obj\\",
+        "projectPath": "C:\\Users\\Erickson\\Downloads\\Salon-Manager\\SalonManager.Negocios\\SalonManager.Negocios.csproj",
+        "packagesPath": "C:\\Users\\Erickson\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Erickson\\Downloads\\Salon-Manager\\SalonManager.Negocios\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\omar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Erickson\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -384,8 +384,8 @@
             "framework": "net10.0",
             "targetAlias": "net10.0",
             "projectReferences": {
-              "C:\\Users\\omar\\source\\repos\\Salon-Manager\\SalonManager.Datos\\SalonManager.Datos.csproj": {
-                "projectPath": "C:\\Users\\omar\\source\\repos\\Salon-Manager\\SalonManager.Datos\\SalonManager.Datos.csproj"
+              "C:\\Users\\Erickson\\Downloads\\Salon-Manager\\SalonManager.Datos\\SalonManager.Datos.csproj": {
+                "projectPath": "C:\\Users\\Erickson\\Downloads\\Salon-Manager\\SalonManager.Datos\\SalonManager.Datos.csproj"
               }
             }
           }
@@ -700,17 +700,17 @@
         }
       }
     },
-    "C:\\Users\\omar\\source\\repos\\Salon-Manager\\SalonManager.UI\\SalonManager.UI.csproj": {
+    "C:\\Users\\Erickson\\Downloads\\Salon-Manager\\SalonManager.UI\\SalonManager.UI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\omar\\source\\repos\\Salon-Manager\\SalonManager.UI\\SalonManager.UI.csproj",
+        "projectUniqueName": "C:\\Users\\Erickson\\Downloads\\Salon-Manager\\SalonManager.UI\\SalonManager.UI.csproj",
         "projectName": "SalonManager.UI",
-        "projectPath": "C:\\Users\\omar\\source\\repos\\Salon-Manager\\SalonManager.UI\\SalonManager.UI.csproj",
-        "packagesPath": "C:\\Users\\omar\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\omar\\source\\repos\\Salon-Manager\\SalonManager.UI\\obj\\",
+        "projectPath": "C:\\Users\\Erickson\\Downloads\\Salon-Manager\\SalonManager.UI\\SalonManager.UI.csproj",
+        "packagesPath": "C:\\Users\\Erickson\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Erickson\\Downloads\\Salon-Manager\\SalonManager.UI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\omar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Erickson\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -725,11 +725,11 @@
             "framework": "net10.0-windows7.0",
             "targetAlias": "net10.0-windows",
             "projectReferences": {
-              "C:\\Users\\omar\\source\\repos\\Salon-Manager\\SalonManager.Datos\\SalonManager.Datos.csproj": {
-                "projectPath": "C:\\Users\\omar\\source\\repos\\Salon-Manager\\SalonManager.Datos\\SalonManager.Datos.csproj"
+              "C:\\Users\\Erickson\\Downloads\\Salon-Manager\\SalonManager.Datos\\SalonManager.Datos.csproj": {
+                "projectPath": "C:\\Users\\Erickson\\Downloads\\Salon-Manager\\SalonManager.Datos\\SalonManager.Datos.csproj"
               },
-              "C:\\Users\\omar\\source\\repos\\Salon-Manager\\SalonManager.Negocios\\SalonManager.Negocios.csproj": {
-                "projectPath": "C:\\Users\\omar\\source\\repos\\Salon-Manager\\SalonManager.Negocios\\SalonManager.Negocios.csproj"
+              "C:\\Users\\Erickson\\Downloads\\Salon-Manager\\SalonManager.Negocios\\SalonManager.Negocios.csproj": {
+                "projectPath": "C:\\Users\\Erickson\\Downloads\\Salon-Manager\\SalonManager.Negocios\\SalonManager.Negocios.csproj"
               }
             }
           }
