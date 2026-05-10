@@ -34,6 +34,7 @@
             btnAgregarEstilista = new Button();
             btnEditarEstilista = new Button();
             btnEliminarEstilista = new Button();
+            btnHome = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvEstilistas).BeginInit();
             SuspendLayout();
             // 
@@ -99,11 +100,24 @@
             btnEliminarEstilista.UseVisualStyleBackColor = false;
             btnEliminarEstilista.Click += btnEliminarEstilista_Click;
             // 
+            // btnHome
+            // 
+            btnHome.BackColor = Color.Aquamarine;
+            btnHome.ForeColor = SystemColors.ActiveCaptionText;
+            btnHome.Location = new Point(33, 12);
+            btnHome.Name = "btnHome";
+            btnHome.Size = new Size(127, 45);
+            btnHome.TabIndex = 6;
+            btnHome.Text = "Home";
+            btnHome.UseVisualStyleBackColor = false;
+            btnHome.Click += btnHome_Click;
+            // 
             // FormEstilistas
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 646);
+            Controls.Add(btnHome);
             Controls.Add(btnEliminarEstilista);
             Controls.Add(btnEditarEstilista);
             Controls.Add(btnAgregarEstilista);
@@ -126,5 +140,6 @@
         private Button btnAgregarEstilista;
         private Button btnEditarEstilista;
         private Button btnEliminarEstilista;
+        private Button btnHome;
     }
 }

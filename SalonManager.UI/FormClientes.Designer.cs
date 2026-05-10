@@ -34,6 +34,7 @@
             btnAgregarCliente = new Button();
             btnEditarCliente = new Button();
             btnEliminarCliente = new Button();
+            btnHome = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvClientes).BeginInit();
             SuspendLayout();
             // 
@@ -67,9 +68,9 @@
             // 
             btnAgregarCliente.BackColor = Color.MediumSeaGreen;
             btnAgregarCliente.ForeColor = SystemColors.ButtonHighlight;
-            btnAgregarCliente.Location = new Point(34, 24);
+            btnAgregarCliente.Location = new Point(179, 24);
             btnAgregarCliente.Name = "btnAgregarCliente";
-            btnAgregarCliente.Size = new Size(182, 46);
+            btnAgregarCliente.Size = new Size(168, 46);
             btnAgregarCliente.TabIndex = 3;
             btnAgregarCliente.Text = "+ Agregar Cliente";
             btnAgregarCliente.UseVisualStyleBackColor = false;
@@ -79,9 +80,9 @@
             // 
             btnEditarCliente.BackColor = Color.SteelBlue;
             btnEditarCliente.ForeColor = SystemColors.ButtonHighlight;
-            btnEditarCliente.Location = new Point(223, 24);
+            btnEditarCliente.Location = new Point(353, 24);
             btnEditarCliente.Name = "btnEditarCliente";
-            btnEditarCliente.Size = new Size(182, 46);
+            btnEditarCliente.Size = new Size(179, 46);
             btnEditarCliente.TabIndex = 4;
             btnEditarCliente.Text = "Editar";
             btnEditarCliente.UseVisualStyleBackColor = false;
@@ -91,19 +92,32 @@
             // 
             btnEliminarCliente.BackColor = Color.IndianRed;
             btnEliminarCliente.ForeColor = SystemColors.ButtonHighlight;
-            btnEliminarCliente.Location = new Point(411, 24);
+            btnEliminarCliente.Location = new Point(538, 24);
             btnEliminarCliente.Name = "btnEliminarCliente";
-            btnEliminarCliente.Size = new Size(182, 46);
+            btnEliminarCliente.Size = new Size(171, 46);
             btnEliminarCliente.TabIndex = 5;
             btnEliminarCliente.Text = "- Eliminar";
             btnEliminarCliente.UseVisualStyleBackColor = false;
             btnEliminarCliente.Click += btnEliminarCliente_Click;
+            // 
+            // btnHome
+            // 
+            btnHome.BackColor = Color.Aquamarine;
+            btnHome.ForeColor = SystemColors.ActiveCaptionText;
+            btnHome.Location = new Point(34, 24);
+            btnHome.Name = "btnHome";
+            btnHome.Size = new Size(139, 46);
+            btnHome.TabIndex = 6;
+            btnHome.Text = "Home";
+            btnHome.UseVisualStyleBackColor = false;
+            btnHome.Click += btnHome_Click;
             // 
             // FormClientes
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 723);
+            Controls.Add(btnHome);
             Controls.Add(btnEliminarCliente);
             Controls.Add(btnEditarCliente);
             Controls.Add(btnAgregarCliente);
@@ -126,5 +140,6 @@
         private Button btnAgregarCliente;
         private Button btnEditarCliente;
         private Button btnEliminarCliente;
+        private Button btnHome;
     }
 }

@@ -153,6 +153,11 @@ namespace SalonManager.UI
                 ActualizarTablaEstilistas();
             }
         }
+
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 
     public class EstilistaSimulado

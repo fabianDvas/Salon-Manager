@@ -3,8 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\omar\\source\\repos\\Salon-Manager\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D979BFF1-37A0-FB27-A325-E61F65C4A908}|SalonManager.UI\\SalonManager.UI.csproj|C:\\Users\\omar\\source\\repos\\Salon-Manager\\salonmanager.ui\\formclientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{D979BFF1-37A0-FB27-A325-E61F65C4A908}|SalonManager.UI\\SalonManager.UI.csproj|c:\\users\\omar\\source\\repos\\salon-manager\\salonmanager.ui\\formclientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D979BFF1-37A0-FB27-A325-E61F65C4A908}|SalonManager.UI\\SalonManager.UI.csproj|solutionrelative:salonmanager.ui\\formclientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D979BFF1-37A0-FB27-A325-E61F65C4A908}|SalonManager.UI\\SalonManager.UI.csproj|c:\\users\\omar\\source\\repos\\salon-manager\\salonmanager.ui\\formclientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{D979BFF1-37A0-FB27-A325-E61F65C4A908}|SalonManager.UI\\SalonManager.UI.csproj|solutionrelative:salonmanager.ui\\formclientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D979BFF1-37A0-FB27-A325-E61F65C4A908}|SalonManager.UI\\SalonManager.UI.csproj|c:\\users\\omar\\source\\repos\\salon-manager\\salonmanager.ui\\formestilistas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D979BFF1-37A0-FB27-A325-E61F65C4A908}|SalonManager.UI\\SalonManager.UI.csproj|solutionrelative:salonmanager.ui\\formestilistas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D979BFF1-37A0-FB27-A325-E61F65C4A908}|SalonManager.UI\\SalonManager.UI.csproj|C:\\Users\\omar\\source\\repos\\Salon-Manager\\salonmanager.ui\\formestilistas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -15,16 +23,16 @@
       "RelativeMoniker": "D:0:0:{D979BFF1-37A0-FB27-A325-E61F65C4A908}|SalonManager.UI\\SalonManager.UI.csproj|solutionrelative:salonmanager.ui\\formclientes.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{D979BFF1-37A0-FB27-A325-E61F65C4A908}|SalonManager.UI\\SalonManager.UI.csproj|c:\\users\\omar\\source\\repos\\salon-manager\\salonmanager.ui\\formestilistas.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D979BFF1-37A0-FB27-A325-E61F65C4A908}|SalonManager.UI\\SalonManager.UI.csproj|solutionrelative:salonmanager.ui\\formestilistas.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{D979BFF1-37A0-FB27-A325-E61F65C4A908}|SalonManager.UI\\SalonManager.UI.csproj|C:\\Users\\omar\\source\\repos\\Salon-Manager\\salonmanager.ui\\formestilistaregistro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{D979BFF1-37A0-FB27-A325-E61F65C4A908}|SalonManager.UI\\SalonManager.UI.csproj|solutionrelative:salonmanager.ui\\formestilistaregistro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D979BFF1-37A0-FB27-A325-E61F65C4A908}|SalonManager.UI\\SalonManager.UI.csproj|C:\\Users\\omar\\source\\repos\\Salon-Manager\\salonmanager.ui\\formproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{D979BFF1-37A0-FB27-A325-E61F65C4A908}|SalonManager.UI\\SalonManager.UI.csproj|solutionrelative:salonmanager.ui\\formproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D979BFF1-37A0-FB27-A325-E61F65C4A908}|SalonManager.UI\\SalonManager.UI.csproj|c:\\users\\omar\\source\\repos\\salon-manager\\salonmanager.ui\\formclientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D979BFF1-37A0-FB27-A325-E61F65C4A908}|SalonManager.UI\\SalonManager.UI.csproj|solutionrelative:salonmanager.ui\\formclientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D979BFF1-37A0-FB27-A325-E61F65C4A908}|SalonManager.UI\\SalonManager.UI.csproj|C:\\Users\\omar\\source\\repos\\Salon-Manager\\salonmanager.ui\\forminventario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -37,14 +45,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{D979BFF1-37A0-FB27-A325-E61F65C4A908}|SalonManager.UI\\SalonManager.UI.csproj|c:\\users\\omar\\source\\repos\\salon-manager\\salonmanager.ui\\formestilistaregistro.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D979BFF1-37A0-FB27-A325-E61F65C4A908}|SalonManager.UI\\SalonManager.UI.csproj|solutionrelative:salonmanager.ui\\formestilistaregistro.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D979BFF1-37A0-FB27-A325-E61F65C4A908}|SalonManager.UI\\SalonManager.UI.csproj|c:\\users\\omar\\source\\repos\\salon-manager\\salonmanager.ui\\formestilistas.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D979BFF1-37A0-FB27-A325-E61F65C4A908}|SalonManager.UI\\SalonManager.UI.csproj|solutionrelative:salonmanager.ui\\formestilistas.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D979BFF1-37A0-FB27-A325-E61F65C4A908}|SalonManager.UI\\SalonManager.UI.csproj|c:\\users\\omar\\source\\repos\\salon-manager\\salonmanager.ui\\formestilistas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D979BFF1-37A0-FB27-A325-E61F65C4A908}|SalonManager.UI\\SalonManager.UI.csproj|solutionrelative:salonmanager.ui\\formestilistas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D979BFF1-37A0-FB27-A325-E61F65C4A908}|SalonManager.UI\\SalonManager.UI.csproj|C:\\Users\\omar\\source\\repos\\Salon-Manager\\salonmanager.ui\\formclienteregistro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -107,30 +107,6 @@
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "FormEstilistaRegistro.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\omar\\source\\repos\\Salon-Manager\\SalonManager.UI\\FormEstilistaRegistro.cs",
-              "RelativeDocumentMoniker": "SalonManager.UI\\FormEstilistaRegistro.cs",
-              "ToolTip": "C:\\Users\\omar\\source\\repos\\Salon-Manager\\SalonManager.UI\\FormEstilistaRegistro.cs [Dise\u00F1o]",
-              "RelativeToolTip": "SalonManager.UI\\FormEstilistaRegistro.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-09T06:05:20.599Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "FormProducto.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\omar\\source\\repos\\Salon-Manager\\SalonManager.UI\\FormProducto.cs",
-              "RelativeDocumentMoniker": "SalonManager.UI\\FormProducto.cs",
-              "ToolTip": "C:\\Users\\omar\\source\\repos\\Salon-Manager\\SalonManager.UI\\FormProducto.cs [Dise\u00F1o]",
-              "RelativeToolTip": "SalonManager.UI\\FormProducto.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-05T17:48:56.414Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "FormEstilistas.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\omar\\source\\repos\\Salon-Manager\\SalonManager.UI\\FormEstilistas.cs",
               "RelativeDocumentMoniker": "SalonManager.UI\\FormEstilistas.cs",
@@ -142,7 +118,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "FormClientes.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\omar\\source\\repos\\Salon-Manager\\SalonManager.UI\\FormClientes.cs",
               "RelativeDocumentMoniker": "SalonManager.UI\\FormClientes.cs",
@@ -154,45 +130,92 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "FormClientes.Designer.cs",
               "DocumentMoniker": "C:\\Users\\omar\\source\\repos\\Salon-Manager\\SalonManager.UI\\FormClientes.Designer.cs",
               "RelativeDocumentMoniker": "SalonManager.UI\\FormClientes.Designer.cs",
               "ToolTip": "C:\\Users\\omar\\source\\repos\\Salon-Manager\\SalonManager.UI\\FormClientes.Designer.cs*",
               "RelativeToolTip": "SalonManager.UI\\FormClientes.Designer.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGUAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-09T07:40:10.575Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 0,
               "Title": "FormClientes.cs",
               "DocumentMoniker": "C:\\Users\\omar\\source\\repos\\Salon-Manager\\SalonManager.UI\\FormClientes.cs",
               "RelativeDocumentMoniker": "SalonManager.UI\\FormClientes.cs",
               "ToolTip": "C:\\Users\\omar\\source\\repos\\Salon-Manager\\SalonManager.UI\\FormClientes.cs*",
               "RelativeToolTip": "SalonManager.UI\\FormClientes.cs*",
-              "ViewState": "AgIAAKIAAAAAAAAAAAAmwLIAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAAKkAAAAAAAAAAAAjwLQAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-09T03:40:55.207Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FormEstilistas.cs",
+              "DocumentMoniker": "C:\\Users\\omar\\source\\repos\\Salon-Manager\\SalonManager.UI\\FormEstilistas.cs",
+              "RelativeDocumentMoniker": "SalonManager.UI\\FormEstilistas.cs",
+              "ToolTip": "C:\\Users\\omar\\source\\repos\\Salon-Manager\\SalonManager.UI\\FormEstilistas.cs",
+              "RelativeToolTip": "SalonManager.UI\\FormEstilistas.cs",
+              "ViewState": "AgIAAJAAAAAAAAAAAAAjwJ4AAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-09T05:34:15.763Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "FormEstilistas.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\omar\\source\\repos\\Salon-Manager\\SalonManager.UI\\FormEstilistas.Designer.cs",
+              "RelativeDocumentMoniker": "SalonManager.UI\\FormEstilistas.Designer.cs",
+              "ToolTip": "C:\\Users\\omar\\source\\repos\\Salon-Manager\\SalonManager.UI\\FormEstilistas.Designer.cs",
+              "RelativeToolTip": "SalonManager.UI\\FormEstilistas.Designer.cs",
+              "ViewState": "AgIAAGIAAAAAAAAAAAAnwG4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-09T05:52:44.451Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "FormProducto.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\omar\\source\\repos\\Salon-Manager\\SalonManager.UI\\FormProducto.cs",
+              "RelativeDocumentMoniker": "SalonManager.UI\\FormProducto.cs",
+              "ToolTip": "C:\\Users\\omar\\source\\repos\\Salon-Manager\\SalonManager.UI\\FormProducto.cs [Dise\u00F1o]",
+              "RelativeToolTip": "SalonManager.UI\\FormProducto.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-05T17:48:56.414Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 6,
+              "Title": "FormEstilistaRegistro.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\omar\\source\\repos\\Salon-Manager\\SalonManager.UI\\FormEstilistaRegistro.cs",
+              "RelativeDocumentMoniker": "SalonManager.UI\\FormEstilistaRegistro.cs",
+              "ToolTip": "C:\\Users\\omar\\source\\repos\\Salon-Manager\\SalonManager.UI\\FormEstilistaRegistro.cs [Dise\u00F1o]",
+              "RelativeToolTip": "SalonManager.UI\\FormEstilistaRegistro.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-09T06:05:20.599Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "FormInventario.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\omar\\source\\repos\\Salon-Manager\\SalonManager.UI\\FormInventario.cs",
               "RelativeDocumentMoniker": "SalonManager.UI\\FormInventario.cs",
               "ToolTip": "C:\\Users\\omar\\source\\repos\\Salon-Manager\\SalonManager.UI\\FormInventario.cs [Dise\u00F1o]",
               "RelativeToolTip": "SalonManager.UI\\FormInventario.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-05T17:23:42.245Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2026-05-05T17:23:42.245Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "FormEstilistaRegistro.cs",
               "DocumentMoniker": "C:\\Users\\omar\\source\\repos\\Salon-Manager\\SalonManager.UI\\FormEstilistaRegistro.cs",
               "RelativeDocumentMoniker": "SalonManager.UI\\FormEstilistaRegistro.cs",
@@ -200,12 +223,11 @@
               "RelativeToolTip": "SalonManager.UI\\FormEstilistaRegistro.cs",
               "ViewState": "AgIAABEAAAAAAAAAAAAcwCEAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-09T06:10:51.649Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-09T06:10:51.649Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "FormEstilistaRegistro.Designer.cs",
               "DocumentMoniker": "C:\\Users\\omar\\source\\repos\\Salon-Manager\\SalonManager.UI\\FormEstilistaRegistro.Designer.cs",
               "RelativeDocumentMoniker": "SalonManager.UI\\FormEstilistaRegistro.Designer.cs",
@@ -213,34 +235,7 @@
               "RelativeToolTip": "SalonManager.UI\\FormEstilistaRegistro.Designer.cs",
               "ViewState": "AgIAACcAAAAAAAAAAAAkwEgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-09T06:11:12.982Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "FormEstilistas.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\omar\\source\\repos\\Salon-Manager\\SalonManager.UI\\FormEstilistas.Designer.cs",
-              "RelativeDocumentMoniker": "SalonManager.UI\\FormEstilistas.Designer.cs",
-              "ToolTip": "C:\\Users\\omar\\source\\repos\\Salon-Manager\\SalonManager.UI\\FormEstilistas.Designer.cs",
-              "RelativeToolTip": "SalonManager.UI\\FormEstilistas.Designer.cs",
-              "ViewState": "AgIAAGAAAAAAAAAAAAD4vzgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-09T05:52:44.451Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "FormEstilistas.cs",
-              "DocumentMoniker": "C:\\Users\\omar\\source\\repos\\Salon-Manager\\SalonManager.UI\\FormEstilistas.cs",
-              "RelativeDocumentMoniker": "SalonManager.UI\\FormEstilistas.cs",
-              "ToolTip": "C:\\Users\\omar\\source\\repos\\Salon-Manager\\SalonManager.UI\\FormEstilistas.cs",
-              "RelativeToolTip": "SalonManager.UI\\FormEstilistas.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHwAAAAxAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-09T05:34:15.763Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-09T06:11:12.982Z"
             },
             {
               "$type": "Document",
@@ -299,8 +294,7 @@
               "RelativeToolTip": "SalonManager.UI\\FormInventario.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-06T02:35:17.237Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-06T02:35:17.237Z"
             },
             {
               "$type": "Document",
@@ -312,8 +306,7 @@
               "RelativeToolTip": "SalonManager.UI\\FormProducto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwAwAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-06T02:42:50.597Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-06T02:42:50.597Z"
             },
             {
               "$type": "Document",

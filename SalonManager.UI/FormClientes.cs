@@ -176,7 +176,10 @@ namespace SalonManager.UI
             }
         }
 
-        
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 
     // Clase simulada compacta (¡Sin correo!)
