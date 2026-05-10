@@ -8,7 +8,8 @@ namespace SalonManager.UI
 {
     public partial class FormEstilistas : Form
     {
-        private List<EstilistaSimulado> _estilistasSimulados;
+        // Inicializamos la lista con new() para evitar advertencia de nulo en el constructor
+        private List<EstilistaSimulado> _estilistasSimulados = new();
 
         public FormEstilistas()
         {
@@ -33,7 +34,8 @@ namespace SalonManager.UI
             if (!string.IsNullOrWhiteSpace(filtro))
             {
                 lista = _estilistasSimulados
-                    .Where(e => e.Nombre.ToLower().Contains(filtro.ToLower()) || e.Especialidad.ToLower().Contains(filtro.ToLower()))
+                    .Where(e => (e.Nombre?.ToLower().Contains(filtro.ToLower()) ?? false) ||
+                                (e.Especialidad?.ToLower().Contains(filtro.ToLower()) ?? false))
                     .ToList();
             }
 
@@ -56,7 +58,6 @@ namespace SalonManager.UI
             ActualizarTablaEstilistas(txtBuscarEstilista.Text);
         }
 
-        // BOTÓN AGREGAR (CON VALIDACIÓN DE DUPLICADOS)
         private void btnAgregarEstilista_Click(object sender, EventArgs e)
         {
             var ventanaRegistro = new FormEstilistaRegistro();
@@ -65,10 +66,12 @@ namespace SalonManager.UI
             {
                 var nuevoEstilista = ventanaRegistro.Estilista;
 
-                // 🔍 VALIDACIÓN: ¿Ya existe un estilista con el mismo nombre o teléfono?
+                // Validación de nulo para evitar errores al procesar el nuevo estilista
+                if (nuevoEstilista == null) return;
+
                 bool yaExiste = _estilistasSimulados.Any(x =>
-                    x.Nombre.Trim().ToLower() == nuevoEstilista.Nombre.Trim().ToLower() ||
-                    x.Telefono.Trim() == nuevoEstilista.Telefono.Trim());
+                    (x.Nombre?.Trim().ToLower() == nuevoEstilista.Nombre?.Trim().ToLower()) ||
+                    (x.Telefono?.Trim() == nuevoEstilista.Telefono?.Trim()));
 
                 if (yaExiste)
                 {
@@ -80,7 +83,6 @@ namespace SalonManager.UI
                     return;
                 }
 
-                // Si pasa la validación, generamos su ID y lo agregamos
                 nuevoEstilista.Id = _estilistasSimulados.Any() ? _estilistasSimulados.Max(x => x.Id) + 1 : 1;
                 _estilistasSimulados.Add(nuevoEstilista);
                 ActualizarTablaEstilistas();
@@ -88,7 +90,6 @@ namespace SalonManager.UI
             }
         }
 
-        // BOTÓN EDITAR (CON VALIDACIÓN DE DUPLICADOS)
         private void btnEditarEstilista_Click(object sender, EventArgs e)
         {
             if (dgvEstilistas.CurrentRow == null)
@@ -102,7 +103,6 @@ namespace SalonManager.UI
 
             if (estilistaAEditar != null)
             {
-                // Guardamos los datos viejos por si ocurre un duplicado
                 string nombreViejo = estilistaAEditar.Nombre;
                 string telefonoViejo = estilistaAEditar.Telefono;
                 string especialidadVieja = estilistaAEditar.Especialidad;
@@ -111,11 +111,10 @@ namespace SalonManager.UI
 
                 if (ventanaRegistro.ShowDialog() == DialogResult.OK)
                 {
-                    // 🔍 VALIDACIÓN: ¿Coincide con los datos de OTRO estilista?
                     bool duplicadoConOtro = _estilistasSimulados.Any(x =>
                         x.Id != id && (
-                            x.Nombre.Trim().ToLower() == estilistaAEditar.Nombre.Trim().ToLower() ||
-                            x.Telefono.Trim() == estilistaAEditar.Telefono.Trim()
+                            x.Nombre?.Trim().ToLower() == estilistaAEditar.Nombre?.Trim().ToLower() ||
+                            x.Telefono?.Trim() == estilistaAEditar.Telefono?.Trim()
                         ));
 
                     if (duplicadoConOtro)
@@ -126,7 +125,6 @@ namespace SalonManager.UI
                             MessageBoxButtons.OK,
                             MessageBoxIcon.Warning);
 
-                        // Restauramos los valores
                         estilistaAEditar.Nombre = nombreViejo;
                         estilistaAEditar.Telefono = telefonoViejo;
                         estilistaAEditar.Especialidad = especialidadVieja;
@@ -144,13 +142,16 @@ namespace SalonManager.UI
             if (dgvEstilistas.CurrentRow == null) return;
 
             int id = Convert.ToInt32(dgvEstilistas.CurrentRow.Cells["ID"].Value);
-            string nombre = dgvEstilistas.CurrentRow.Cells["Nombre"].Value.ToString();
+            string nombre = dgvEstilistas.CurrentRow.Cells["Nombre"].Value?.ToString() ?? "Estilista";
 
             if (MessageBox.Show($"¿Eliminar a {nombre}?", "Confirmar", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 var estilista = _estilistasSimulados.FirstOrDefault(x => x.Id == id);
-                _estilistasSimulados.Remove(estilista);
-                ActualizarTablaEstilistas();
+                if (estilista != null)
+                {
+                    _estilistasSimulados.Remove(estilista);
+                    ActualizarTablaEstilistas();
+                }
             }
         }
     }
@@ -158,8 +159,9 @@ namespace SalonManager.UI
     public class EstilistaSimulado
     {
         public int Id { get; set; }
-        public string Nombre { get; set; }
-        public string Telefono { get; set; }
-        public string Especialidad { get; set; }
+        //  Inicializamos los strings 
+        public string Nombre { get; set; } = string.Empty;
+        public string Telefono { get; set; } = string.Empty;
+        public string Especialidad { get; set; } = string.Empty;
     }
 }

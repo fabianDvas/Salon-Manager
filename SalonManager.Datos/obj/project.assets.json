@@ -1,5 +1,5 @@
 {
-  "version": 3,
+  "version": 4,
   "targets": {
     "net10.0": {
       "Humanizer.Core/2.14.1": {
@@ -2956,19 +2956,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\omar\\.nuget\\packages\\": {}
+    "C:\\Users\\User\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\omar\\source\\repos\\Salon-Manager\\SalonManager.Datos\\SalonManager.Datos.csproj",
+      "projectUniqueName": "C:\\Users\\User\\source\\repos\\Salon-Manager.git1\\SalonManager.Datos\\SalonManager.Datos.csproj",
       "projectName": "SalonManager.Datos",
-      "projectPath": "C:\\Users\\omar\\source\\repos\\Salon-Manager\\SalonManager.Datos\\SalonManager.Datos.csproj",
-      "packagesPath": "C:\\Users\\omar\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\omar\\source\\repos\\Salon-Manager\\SalonManager.Datos\\obj\\",
+      "projectPath": "C:\\Users\\User\\source\\repos\\Salon-Manager.git1\\SalonManager.Datos\\SalonManager.Datos.csproj",
+      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\User\\source\\repos\\Salon-Manager.git1\\SalonManager.Datos\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\omar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2995,7 +2995,7 @@
         "auditLevel": "low",
         "auditMode": "all"
       },
-      "SdkAnalysisLevel": "10.0.200"
+      "SdkAnalysisLevel": "10.0.300"
     },
     "frameworks": {
       "net10.0": {
@@ -3035,7 +3035,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.203/PortableRuntimeIdentifierGraph.json",
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.300-preview.0.26177.108/PortableRuntimeIdentifierGraph.json",
         "packagesToPrune": {
           "Microsoft.CSharp": "(,4.7.32767]",
           "Microsoft.VisualBasic": "(,10.4.32767]",

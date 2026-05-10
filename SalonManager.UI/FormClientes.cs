@@ -9,7 +9,7 @@ namespace SalonManager.UI
     public partial class FormClientes : Form
     {
         // Nuestra lista simulada en memoria
-        private List<ClienteSimulado> _clientesSimulados;
+        private List<ClienteSimulado> _clientesSimulados = new List<ClienteSimulado>();
 
         public FormClientes()
         {
@@ -156,7 +156,7 @@ namespace SalonManager.UI
             }
 
             int id = Convert.ToInt32(dgvClientes.CurrentRow.Cells["ID"].Value);
-            string nombre = dgvClientes.CurrentRow.Cells["Nombre"].Value.ToString();
+            string nombre = dgvClientes.CurrentRow?.Cells["Nombre"].Value?.ToString() ?? "Cliente";
 
             var confirmacion = MessageBox.Show(
                 $"¿Estás seguro de que deseas eliminar al cliente '{nombre}'?",
@@ -183,8 +183,8 @@ namespace SalonManager.UI
     public class ClienteSimulado
     {
         public int Id { get; set; }
-        public string Nombre { get; set; }
-        public string Telefono { get; set; }
+        public string Nombre { get; set; } = string.Empty;
+        public string Telefono { get; set; } = string.Empty;
         public DateTime FechaRegistro { get; set; }
     }
 }
