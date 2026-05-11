@@ -34,7 +34,6 @@
             btnAgregar = new Button();
             btnEditar = new Button();
             btnEliminar = new Button();
-            btnAtras = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvProductos).BeginInit();
             SuspendLayout();
             // 
@@ -81,7 +80,7 @@
             btnAgregar.FlatStyle = FlatStyle.Flat;
             btnAgregar.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             btnAgregar.ForeColor = Color.White;
-            btnAgregar.Location = new Point(136, 412);
+            btnAgregar.Location = new Point(102, 413);
             btnAgregar.Name = "btnAgregar";
             btnAgregar.Size = new Size(120, 38);
             btnAgregar.TabIndex = 3;
@@ -95,7 +94,7 @@
             btnEditar.FlatStyle = FlatStyle.Flat;
             btnEditar.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             btnEditar.ForeColor = Color.White;
-            btnEditar.Location = new Point(329, 412);
+            btnEditar.Location = new Point(274, 413);
             btnEditar.Name = "btnEditar";
             btnEditar.Size = new Size(120, 38);
             btnEditar.TabIndex = 4;
@@ -109,7 +108,7 @@
             btnEliminar.FlatStyle = FlatStyle.Flat;
             btnEliminar.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             btnEliminar.ForeColor = Color.White;
-            btnEliminar.Location = new Point(515, 412);
+            btnEliminar.Location = new Point(462, 413);
             btnEliminar.Name = "btnEliminar";
             btnEliminar.Size = new Size(120, 38);
             btnEliminar.TabIndex = 5;
@@ -117,25 +116,11 @@
             btnEliminar.UseVisualStyleBackColor = false;
             btnEliminar.Click += btnEliminar_Click_1;
             // 
-            // btnAtras
-            // 
-            btnAtras.BackColor = Color.DimGray;
-            btnAtras.FlatStyle = FlatStyle.Flat;
-            btnAtras.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
-            btnAtras.ForeColor = Color.White;
-            btnAtras.Location = new Point(21, 417);
-            btnAtras.Name = "btnAtras";
-            btnAtras.Size = new Size(61, 33);
-            btnAtras.TabIndex = 6;
-            btnAtras.Text = "Atras";
-            btnAtras.UseVisualStyleBackColor = false;
-            // 
             // FormInventario
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(734, 467);
-            Controls.Add(btnAtras);
             Controls.Add(btnEliminar);
             Controls.Add(btnEditar);
             Controls.Add(btnAgregar);
@@ -159,6 +144,5 @@
         private Button btnAgregar;
         private Button btnEditar;
         private Button btnEliminar;
-        private Button btnAtras;
     }
 }
