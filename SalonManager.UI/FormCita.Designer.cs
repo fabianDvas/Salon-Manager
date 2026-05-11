@@ -50,49 +50,55 @@
             // cmbEstado
             // 
             cmbEstado.FormattingEnabled = true;
-            cmbEstado.Location = new Point(110, 155);
+            cmbEstado.Location = new Point(77, 93);
+            cmbEstado.Margin = new Padding(2);
             cmbEstado.Name = "cmbEstado";
-            cmbEstado.Size = new Size(222, 33);
+            cmbEstado.Size = new Size(157, 23);
             cmbEstado.TabIndex = 1;
             // 
             // cmbEstilista
             // 
             cmbEstilista.FormattingEnabled = true;
-            cmbEstilista.Location = new Point(110, 82);
+            cmbEstilista.Location = new Point(77, 49);
+            cmbEstilista.Margin = new Padding(2);
             cmbEstilista.Name = "cmbEstilista";
-            cmbEstilista.Size = new Size(222, 33);
+            cmbEstilista.Size = new Size(157, 23);
             cmbEstilista.TabIndex = 2;
             // 
             // cmbCliente
             // 
             cmbCliente.FormattingEnabled = true;
-            cmbCliente.Location = new Point(110, 8);
+            cmbCliente.Location = new Point(77, 5);
+            cmbCliente.Margin = new Padding(2);
             cmbCliente.Name = "cmbCliente";
-            cmbCliente.Size = new Size(222, 33);
+            cmbCliente.Size = new Size(157, 23);
             cmbCliente.TabIndex = 3;
             // 
             // dtpFecha
             // 
-            dtpFecha.Location = new Point(403, 416);
+            dtpFecha.Location = new Point(291, 250);
+            dtpFecha.Margin = new Padding(2);
             dtpFecha.Name = "dtpFecha";
-            dtpFecha.Size = new Size(330, 31);
+            dtpFecha.Size = new Size(238, 23);
             dtpFecha.TabIndex = 4;
             // 
             // checkedListBox1
             // 
             checkedListBox1.FormattingEnabled = true;
-            checkedListBox1.Location = new Point(416, 43);
+            checkedListBox1.Location = new Point(291, 26);
+            checkedListBox1.Margin = new Padding(2);
             checkedListBox1.Name = "checkedListBox1";
-            checkedListBox1.Size = new Size(338, 144);
+            checkedListBox1.Size = new Size(238, 76);
             checkedListBox1.TabIndex = 5;
             // 
             // btnGuardar
             // 
             btnGuardar.BackColor = Color.MediumSeaGreen;
             btnGuardar.Font = new Font("Segoe UI Black", 10F, FontStyle.Bold);
-            btnGuardar.Location = new Point(100, 91);
+            btnGuardar.Location = new Point(71, 63);
+            btnGuardar.Margin = new Padding(2);
             btnGuardar.Name = "btnGuardar";
-            btnGuardar.Size = new Size(150, 34);
+            btnGuardar.Size = new Size(105, 30);
             btnGuardar.TabIndex = 6;
             btnGuardar.Text = "Guardar Cita";
             btnGuardar.UseVisualStyleBackColor = false;
@@ -102,9 +108,10 @@
             // 
             btnLimpiar.BackColor = Color.SteelBlue;
             btnLimpiar.Font = new Font("Segoe UI Black", 10F, FontStyle.Bold);
-            btnLimpiar.Location = new Point(66, 212);
+            btnLimpiar.Location = new Point(41, 132);
+            btnLimpiar.Margin = new Padding(2);
             btnLimpiar.Name = "btnLimpiar";
-            btnLimpiar.Size = new Size(234, 34);
+            btnLimpiar.Size = new Size(164, 28);
             btnLimpiar.TabIndex = 7;
             btnLimpiar.Text = "Quite sus selecciones aqui";
             btnLimpiar.UseVisualStyleBackColor = false;
@@ -113,9 +120,10 @@
             // 
             btnCancelar.BackColor = Color.IndianRed;
             btnCancelar.Font = new Font("Segoe UI Black", 10F, FontStyle.Bold);
-            btnCancelar.Location = new Point(117, 329);
+            btnCancelar.Location = new Point(82, 197);
+            btnCancelar.Margin = new Padding(2);
             btnCancelar.Name = "btnCancelar";
-            btnCancelar.Size = new Size(112, 34);
+            btnCancelar.Size = new Size(78, 31);
             btnCancelar.TabIndex = 8;
             btnCancelar.Text = "Cancelar";
             btnCancelar.UseVisualStyleBackColor = false;
@@ -125,9 +133,10 @@
             label1.AutoSize = true;
             label1.BackColor = Color.Orange;
             label1.Font = new Font("Segoe UI Black", 10F, FontStyle.Bold);
-            label1.Location = new Point(10, 8);
+            label1.Location = new Point(7, 5);
+            label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(80, 28);
+            label1.Size = new Size(57, 19);
             label1.TabIndex = 5;
             label1.Text = "Cliente";
             // 
@@ -136,9 +145,10 @@
             label2.AutoSize = true;
             label2.BackColor = Color.Orange;
             label2.Font = new Font("Segoe UI Black", 10F, FontStyle.Bold);
-            label2.Location = new Point(6, 82);
+            label2.Location = new Point(4, 49);
+            label2.Margin = new Padding(2, 0, 2, 0);
             label2.Name = "label2";
-            label2.Size = new Size(88, 28);
+            label2.Size = new Size(63, 19);
             label2.TabIndex = 6;
             label2.Text = "Estilista";
             // 
@@ -147,9 +157,10 @@
             label3.AutoSize = true;
             label3.BackColor = Color.Orange;
             label3.Font = new Font("Segoe UI Black", 10F, FontStyle.Bold);
-            label3.Location = new Point(10, 157);
+            label3.Location = new Point(7, 94);
+            label3.Margin = new Padding(2, 0, 2, 0);
             label3.Name = "label3";
-            label3.Size = new Size(78, 28);
+            label3.Size = new Size(56, 19);
             label3.TabIndex = 4;
             label3.Text = "Estado";
             // 
@@ -158,9 +169,10 @@
             label4.AutoSize = true;
             label4.BackColor = SystemColors.ActiveCaption;
             label4.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            label4.Location = new Point(100, 11);
+            label4.Location = new Point(58, 10);
+            label4.Margin = new Padding(2, 0, 2, 0);
             label4.Name = "label4";
-            label4.Size = new Size(188, 30);
+            label4.Size = new Size(127, 20);
             label4.TabIndex = 1;
             label4.Text = "Registro de Citas";
             // 
@@ -169,9 +181,10 @@
             label5.AutoSize = true;
             label5.BackColor = SystemColors.ActiveCaption;
             label5.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            label5.Location = new Point(457, -2);
+            label5.Location = new Point(320, -1);
+            label5.Margin = new Padding(2, 0, 2, 0);
             label5.Name = "label5";
-            label5.Size = new Size(254, 30);
+            label5.Size = new Size(171, 20);
             label5.TabIndex = 1;
             label5.Text = "Seleccione los Servicios";
             // 
@@ -180,18 +193,20 @@
             label6.AutoSize = true;
             label6.BackColor = Color.Orange;
             label6.Font = new Font("Segoe UI Black", 10F, FontStyle.Bold);
-            label6.Location = new Point(18, 418);
+            label6.Location = new Point(10, 251);
+            label6.Margin = new Padding(2, 0, 2, 0);
             label6.Name = "label6";
-            label6.Size = new Size(371, 28);
+            label6.Size = new Size(262, 19);
             label6.TabIndex = 0;
             label6.Text = "Selecione la hora de su cita aqui --->";
             // 
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources.Sin_título;
-            pictureBox1.Location = new Point(811, 26);
+            pictureBox1.Location = new Point(568, 16);
+            pictureBox1.Margin = new Padding(2);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(362, 412);
+            pictureBox1.Size = new Size(253, 247);
             pictureBox1.TabIndex = 12;
             pictureBox1.TabStop = false;
             // 
@@ -204,9 +219,11 @@
             groupBox1.Controls.Add(label3);
             groupBox1.Controls.Add(label1);
             groupBox1.Controls.Add(label2);
-            groupBox1.Location = new Point(416, 210);
+            groupBox1.Location = new Point(291, 126);
+            groupBox1.Margin = new Padding(2);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(338, 200);
+            groupBox1.Padding = new Padding(2);
+            groupBox1.Size = new Size(237, 120);
             groupBox1.TabIndex = 13;
             groupBox1.TabStop = false;
             groupBox1.Text = "Información";
@@ -219,23 +236,26 @@
             panel1.Controls.Add(btnGuardar);
             panel1.Controls.Add(btnLimpiar);
             panel1.Controls.Add(btnCancelar);
-            panel1.Location = new Point(0, -2);
+            panel1.Location = new Point(0, -1);
+            panel1.Margin = new Padding(2);
             panel1.Name = "panel1";
-            panel1.Size = new Size(392, 460);
+            panel1.Size = new Size(274, 276);
             panel1.TabIndex = 14;
             // 
             // FormCita
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1185, 450);
+            ClientSize = new Size(830, 310);
             Controls.Add(label5);
             Controls.Add(panel1);
             Controls.Add(groupBox1);
             Controls.Add(pictureBox1);
             Controls.Add(checkedListBox1);
             Controls.Add(dtpFecha);
+            Margin = new Padding(2);
             Name = "FormCita";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "FormCita";
             Load += FormCita_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
