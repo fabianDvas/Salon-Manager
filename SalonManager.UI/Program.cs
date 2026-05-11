@@ -32,7 +32,7 @@ namespace SalonManager.UI
             var db = appScope.ServiceProvider.GetRequiredService<SalonDbContext>();
             db.Database.EnsureCreated();
 
-            Application.Run(new FormCita());
+            Application.Run(new Form1());
         }
     }
 }
