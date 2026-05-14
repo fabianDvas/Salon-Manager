@@ -17,7 +17,7 @@ namespace SalonManager.UI
             InicializarDatosDePrueba();
         }
 
-        // Datos de prueba (Solo con Nombre y Teléfono)
+        // Datos de prueba (Solo con Nombre y Telefono)
         private void InicializarDatosDePrueba()
         {
             _clientesSimulados = new List<ClienteSimulado>
@@ -40,7 +40,6 @@ namespace SalonManager.UI
                     .ToList();
             }
 
-            // Asignamos a la tabla solo los campos necesarios: ID, Nombre, Teléfono y Registro
             dgvClientes.DataSource = listaFiltrada.Select(c => new
             {
                 ID = c.Id,
@@ -50,20 +49,16 @@ namespace SalonManager.UI
             }).ToList();
         }
 
-        // EVENTO: Al abrir la pantalla se cargan los clientes
         private void FormClientes_Load(object sender, EventArgs e)
         {
             ActualizarTablaClientes();
         }
 
-        // EVENTO: Filtra en tiempo real al escribir en el buscador
         private void txtBuscarCliente_TextChanged(object sender, EventArgs e)
         {
             ActualizarTablaClientes(txtBuscarCliente.Text);
         }
 
-
-        // BOTÓN AGREGAR (CON VALIDACIÓN DE DUPLICADOS)
         private void btnAgregarCliente_Click(object sender, EventArgs e)
         {
             var ventanaRegistro = new FormClienteRegistro();
@@ -72,22 +67,16 @@ namespace SalonManager.UI
             {
                 var nuevoCliente = ventanaRegistro.Cliente;
 
-                // 🔍 VALIDACIÓN: ¿Ya existe alguien con el mismo nombre O el mismo teléfono?
                 bool yaExiste = _clientesSimulados.Any(c =>
                     c.Nombre.Trim().ToLower() == nuevoCliente.Nombre.Trim().ToLower() ||
                     c.Telefono.Trim() == nuevoCliente.Telefono.Trim());
 
                 if (yaExiste)
                 {
-                    MessageBox.Show(
-                        "¡Atención! Ya existe un cliente registrado con ese mismo nombre o número de teléfono.",
-                        "Cliente Duplicado",
-                        MessageBoxButtons.OK,
-                        MessageBoxIcon.Warning);
-                    return; // Detiene el proceso y no lo agrega
+                    MessageBox.Show("¡Atención! Ya existe un cliente registrado con ese mismo nombre o número de teléfono.", "Cliente Duplicado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
                 }
 
-                // Si pasa la validación, lo agregamos normalmente
                 nuevoCliente.Id = _clientesSimulados.Any() ? _clientesSimulados.Max(c => c.Id) + 1 : 1;
                 nuevoCliente.FechaRegistro = DateTime.Now;
 
@@ -97,7 +86,6 @@ namespace SalonManager.UI
             }
         }
 
-        // BOTÓN EDITAR (CON VALIDACIÓN DE DUPLICADOS)
         private void btnEditarCliente_Click(object sender, EventArgs e)
         {
             if (dgvClientes.CurrentRow == null)
@@ -111,7 +99,6 @@ namespace SalonManager.UI
 
             if (clienteAEditar != null)
             {
-                // Guardamos los datos viejos por si acaso el usuario cancela o da error
                 string nombreViejo = clienteAEditar.Nombre;
                 string telefonoViejo = clienteAEditar.Telefono;
 
@@ -119,7 +106,6 @@ namespace SalonManager.UI
 
                 if (ventanaRegistro.ShowDialog() == DialogResult.OK)
                 {
-                    // 🔍 VALIDACIÓN: ¿El nuevo nombre o teléfono ya lo tiene OTRO cliente diferente (con ID distinto)?
                     bool duplicadoConOtro = _clientesSimulados.Any(c =>
                         c.Id != id && (
                             c.Nombre.Trim().ToLower() == clienteAEditar.Nombre.Trim().ToLower() ||
@@ -128,13 +114,7 @@ namespace SalonManager.UI
 
                     if (duplicadoConOtro)
                     {
-                        MessageBox.Show(
-                            "No se pueden guardar los cambios. Los datos coinciden con otro cliente ya registrado.",
-                            "Error de Duplicado",
-                            MessageBoxButtons.OK,
-                            MessageBoxIcon.Warning);
-
-                        // Restauramos los valores originales para no dañar los datos en memoria
+                        MessageBox.Show("No se pueden guardar los cambios. Los datos coinciden con otro cliente ya registrado.", "Error de Duplicado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         clienteAEditar.Nombre = nombreViejo;
                         clienteAEditar.Telefono = telefonoViejo;
                         return;
@@ -146,41 +126,33 @@ namespace SalonManager.UI
             }
         }
 
-        // EVENTO: Botón Eliminar
         private void btnEliminarCliente_Click(object sender, EventArgs e)
         {
-            if (dgvClientes.CurrentRow == null)
-            {
-                MessageBox.Show("Por favor, selecciona un cliente para eliminar.", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
+            if (dgvClientes.CurrentRow == null) return;
 
             int id = Convert.ToInt32(dgvClientes.CurrentRow.Cells["ID"].Value);
             string nombre = dgvClientes.CurrentRow?.Cells["Nombre"].Value?.ToString() ?? "Cliente";
 
-            var confirmacion = MessageBox.Show(
-                $"¿Estás seguro de que deseas eliminar al cliente '{nombre}'?",
-                "Confirmar Eliminación",
-                MessageBoxButtons.YesNo,
-                MessageBoxIcon.Question);
-
-            if (confirmacion == DialogResult.Yes)
+            if (MessageBox.Show($"¿Eliminar al cliente '{nombre}'?", "Confirmar", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 var cliente = _clientesSimulados.FirstOrDefault(c => c.Id == id);
                 if (cliente != null)
                 {
                     _clientesSimulados.Remove(cliente);
                     ActualizarTablaClientes();
-                    MessageBox.Show("Cliente eliminado.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Cliente eliminado.", "Información");
                 }
             }
         }
 
-        
+        //  METODO PARA COMPARTIR LA LISTA CON FORM CITA - PeQueno ajuste para evitar que el FormCita tenga que acceder directamente a la lista privada
+        public List<ClienteSimulado> ObtenerListaClientes()
+        {
+            return _clientesSimulados;
+        }
     }
 
-    // Clase simulada compacta (¡Sin correo!)
-    public class ClienteSimulado
+    public class ClienteSimulado : IEntidadSencilla
     {
         public int Id { get; set; }
         public string Nombre { get; set; } = string.Empty;

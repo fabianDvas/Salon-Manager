@@ -1,185 +1,222 @@
-﻿using SalonManager.Datos;
-using SalonManager.Datos.Entidades;
-using Microsoft.EntityFrameworkCore;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Windows.Forms;
+using Microsoft.Data.Sqlite;
 
 namespace SalonManager.UI
 {
     public partial class FormCita : Form
     {
-        private List<Estilista> _estilistasActivos = new List<Estilista>();
-        private Dictionary<string, decimal> _preciosServicios = new Dictionary<string, decimal>();
+        private List<IEntidadSencilla>? _clientes;
+        private List<IEntidadSencilla>? _estilistas;
+        private int? _idCitaSeleccionada = null;
 
-        public FormCita()
+        public FormCita(IEnumerable<IEntidadSencilla> clientes, IEnumerable<IEntidadSencilla> estilistas)
         {
             InitializeComponent();
-            // Configuración para que el usuario escriba el nombre del cliente
-            cmbCliente.DropDownStyle = ComboBoxStyle.DropDown;
-            cmbCliente.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
-            cmbCliente.AutoCompleteSource = AutoCompleteSource.ListItems;
+            _clientes = clientes.ToList();
+            _estilistas = estilistas.ToList();
+
+            CargarCombos();
+            ActualizarTablaCitas();
         }
 
-        private void FormCita_Load(object sender, EventArgs e)
+        private void CargarCombos()
         {
-            try
+            if (_clientes != null)
             {
-                // 1. Estados
-                cmbEstado.Items.Clear();
-                cmbEstado.Items.AddRange(new string[] { "Pendiente", "Completada", "Cancelada" });
-                cmbEstado.SelectedIndex = 0;
-
-                var optionsBuilder = new DbContextOptionsBuilder<SalonDbContext>();
-                optionsBuilder.UseSqlite("Data Source=salon.db");
-
-                using (var db = new SalonDbContext(optionsBuilder.Options))
-                {
-                    // 2. Variedad de Estilistas
-                    _estilistasActivos = db.Estilistas.ToList();
-                    if (_estilistasActivos.Count < 4)
-                    {
-                        db.Estilistas.AddRange(new List<Estilista> {
-                            new Estilista { Nombre = "Ana (Senior - Colorista)", Especialidad = "Tinte" },
-                            new Estilista { Nombre = "Pedro (Junior - Cortes)", Especialidad = "Corte" },
-                            new Estilista { Nombre = "Luis (Master - Estilismo)", Especialidad = "Peinados" },
-                            new Estilista { Nombre = "Sofía (Asistente)", Especialidad = "Lavado" }
-                        });
-                        db.SaveChanges();
-                        _estilistasActivos = db.Estilistas.ToList();
-                    }
-
-                    cmbEstilista.Items.Clear();
-                    foreach (var est in _estilistasActivos) cmbEstilista.Items.Add(est.Nombre);
-
-                    cmbCliente.Items.Clear();
-                    foreach (var n in db.Clientes.Select(c => c.Nombre)) cmbCliente.Items.Add(n);
-
-                    // 3. Servicios con Precios
-                    _preciosServicios.Clear();
-                    _preciosServicios.Add("Corte de Cabello", 500.00m);
-                    _preciosServicios.Add("Lavado y Secado", 350.00m);
-                    _preciosServicios.Add("Tinte Profesional", 1200.00m);
-                    _preciosServicios.Add("Manicura", 400.00m);
-
-                    checkedListBox1.Items.Clear();
-                    foreach (var servicio in _preciosServicios)
-                    {
-                        checkedListBox1.Items.Add($"{servicio.Key} (${servicio.Value})");
-                    }
-
-                    if (cmbEstilista.Items.Count > 0) cmbEstilista.SelectedIndex = 0;
-                }
+                cmbCliente.DataSource = null;
+                cmbCliente.DataSource = _clientes;
+                cmbCliente.DisplayMember = "Nombre";
+                cmbCliente.ValueMember = "Id";
+                cmbCliente.SelectedIndex = -1;
             }
-            catch (Exception ex) { MessageBox.Show("Error al cargar: " + ex.Message); }
+
+            if (_estilistas != null)
+            {
+                cmbEstilista.DataSource = null;
+                cmbEstilista.DataSource = _estilistas;
+                cmbEstilista.DisplayMember = "Nombre";
+                cmbEstilista.ValueMember = "Id";
+                cmbEstilista.SelectedIndex = -1;
+            }
+
+            cmbHora.Items.Clear();
+            cmbHora.Items.AddRange(new string[] {
+                "08:00 AM", "09:00 AM", "10:00 AM", "11:00 AM",
+                "02:00 PM", "03:00 PM", "04:00 PM", "05:00 PM"
+            });
+
+            cmbEstado.Items.Clear();
+            cmbEstado.Items.Add("Pendiente");
+            cmbEstado.Items.Add("Completada");
+            cmbEstado.Items.Add("Cancelada");
+            cmbEstado.SelectedIndex = 0;
         }
 
+        private void ActualizarTablaCitas()
+        {
+            List<CitaSimulada> listaCitas = new List<CitaSimulada>();
+
+            using (var connection = DatabaseHelper.GetConnection())
+            {
+                connection.Open();
+                var command = connection.CreateCommand();
+                command.CommandText = "SELECT Id, Cliente, Fecha, Hora, Estilista, Estado FROM Citas";
+
+                try
+                {
+                    using (var reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            listaCitas.Add(new CitaSimulada
+                            {
+                                Id = reader.GetInt32(0),
+                                Cliente = reader.IsDBNull(1) ? "" : reader.GetString(1),
+                                Fecha = reader.IsDBNull(2) ? "" : reader.GetString(2),
+                                Hora = reader.IsDBNull(3) ? "" : reader.GetString(3),
+                                Estilista = reader.IsDBNull(4) ? "" : reader.GetString(4),
+                                Estado = reader.IsDBNull(5) ? "" : reader.GetString(5)
+                            });
+                        }
+                    }
+                }
+                catch { }
+            }
+
+            // Ajustes importantes para evitar problemas de columnas de FormCitas
+            dataGridView1.Columns.Clear(); 
+            dataGridView1.DataSource = null;
+            dataGridView1.AutoGenerateColumns = true;
+            dataGridView1.DataSource = listaCitas; // Asigna los datos nuevos
+
+            if (dataGridView1.Columns.Count > 0)
+                dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+        }
+
+        // EVENTO: GUARDAR / ACTUALIZAR
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            string nombreIngresado = cmbCliente.Text.Trim();
-            if (string.IsNullOrEmpty(nombreIngresado) || cmbEstilista.SelectedIndex == -1)
+            if (cmbCliente.SelectedIndex == -1 || cmbEstilista.SelectedIndex == -1 || string.IsNullOrEmpty(cmbHora.Text))
             {
-                MessageBox.Show("Por favor, ingrese el nombre del cliente.", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Debe completar todos los campos.", "Atención");
                 return;
             }
 
-            try
+            var cliente = (IEntidadSencilla)cmbCliente.SelectedItem!;
+            var estilista = (IEntidadSencilla)cmbEstilista.SelectedItem!;
+
+            using (var connection = DatabaseHelper.GetConnection())
             {
-                var optionsBuilder = new DbContextOptionsBuilder<SalonDbContext>();
-                optionsBuilder.UseSqlite("Data Source=salon.db");
+                connection.Open();
+                var command = connection.CreateCommand();
 
-                using (var db = new SalonDbContext(optionsBuilder.Options))
+                if (_idCitaSeleccionada == null)
                 {
-                    var clienteDB = db.Clientes.FirstOrDefault(c => c.Nombre.ToLower() == nombreIngresado.ToLower());
-                    if (clienteDB == null)
-                    {
-                        clienteDB = new Cliente { Nombre = nombreIngresado, Telefono = "N/A" };
-                        db.Clientes.Add(clienteDB);
-                        db.SaveChanges();
-                    }
-
-                    var nuevaCita = new Cita
-                    {
-                        Fecha = dtpFecha.Value,
-                        ClienteId = clienteDB.ClienteId,
-                        EstilistaId = _estilistasActivos[cmbEstilista.SelectedIndex].EstilistaId,
-                        Estado = (EstadoCita)Enum.Parse(typeof(EstadoCita), cmbEstado.Text)
-                    };
-
-                    db.Citas.Add(nuevaCita);
-                    db.SaveChanges();
+                    command.CommandText = @"INSERT INTO Citas (Cliente, Fecha, Hora, Estilista, Estado) 
+                                            VALUES ($cli, $fec, $hor, $est, $estd)";
+                }
+                else
+                {
+                    command.CommandText = @"UPDATE Citas SET Cliente=$cli, Fecha=$fec, Hora=$hor, 
+                                            Estilista=$est, Estado=$estd WHERE Id=$id";
+                    command.Parameters.AddWithValue("$id", _idCitaSeleccionada);
                 }
 
-                decimal total = CalcularTotal();
+                command.Parameters.AddWithValue("$cli", cliente.Nombre);
+                command.Parameters.AddWithValue("$fec", dtpFecha.Value.ToShortDateString());
+                command.Parameters.AddWithValue("$hor", cmbHora.Text);
+                command.Parameters.AddWithValue("$est", estilista.Nombre);
+                command.Parameters.AddWithValue("$estd", cmbEstado.Text);
 
-                // MENSAJE DE ÉXITO 
-                string mensajeResumen = $"--- REGISTRO DE CITA EXITOSO ---\n\n" +
-                                       $"CLIENTE: {nombreIngresado.ToUpper()}\n" +
-                                       $"TOTAL ESTIMADO: ${total:N2}\n\n" +
-                                       $"Los datos se han guardado correctamente.";
-
-                MessageBox.Show(mensajeResumen, "Salon Manager ", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                this.Close();
+                command.ExecuteNonQuery();
             }
-            catch (Exception ex) { MessageBox.Show("Error al guardar: " + ex.Message); }
+
+            MessageBox.Show("Operación realizada con éxito.");
+            _idCitaSeleccionada = null;
+            btnGuardar.Text = "Guardar";
+            LimpiarFormulario();
+            ActualizarTablaCitas(); // Refresca la tabla inmediatamente
         }
 
-        private decimal CalcularTotal()
+        // EVENTO: EDITAR (Carga los datos de la tabla a los campos de arriba)
+        private void btnEditar_Click(object sender, EventArgs e)
         {
-            decimal total = 0;
-            foreach (var item in checkedListBox1.CheckedItems)
+            if (dataGridView1.CurrentRow == null)
             {
-                string? itemTexto = item?.ToString();
-                if (!string.IsNullOrEmpty(itemTexto))
-                {
-                    string nombreServicio = itemTexto.Split('(')[0].Trim();
-                    if (_preciosServicios.ContainsKey(nombreServicio))
-                        total += _preciosServicios[nombreServicio];
-                }
+                MessageBox.Show("Seleccione una cita de la lista para editar.");
+                return;
             }
-            return total;
+
+            // Obtenemos el ID de la fila seleccionada
+            var cellId = dataGridView1.CurrentRow.Cells["Id"].Value;
+            if (cellId != null) _idCitaSeleccionada = Convert.ToInt32(cellId);
+
+            // Cargamos los valores a los controles
+            cmbCliente.Text = dataGridView1.CurrentRow.Cells["Cliente"].Value?.ToString() ?? "";
+            cmbEstilista.Text = dataGridView1.CurrentRow.Cells["Estilista"].Value?.ToString() ?? "";
+
+            string? fechaStr = dataGridView1.CurrentRow.Cells["Fecha"].Value?.ToString();
+            if (DateTime.TryParse(fechaStr, out DateTime fechaCita)) dtpFecha.Value = fechaCita;
+
+            cmbHora.Text = dataGridView1.CurrentRow.Cells["Hora"].Value?.ToString() ?? "";
+            cmbEstado.Text = dataGridView1.CurrentRow.Cells["Estado"].Value?.ToString() ?? "Pendiente";
+
+            btnGuardar.Text = "Actualizar Cita"; // Cambia el texto del botón para indicar edición
         }
 
-        // EVENTO LIMPIAR: Quita todos los cambios realizados
-        private void btnLimpiar_Click(object sender, EventArgs e)
+        // EVENTO: ELIMINAR
+        private void btnEliminar_Click(object sender, EventArgs e)
         {
-            //  Limpiar la interfaz visual 
-            cmbCliente.Text = "";
+            if (dataGridView1.CurrentRow == null)
+            {
+                MessageBox.Show("Seleccione una cita para eliminar.");
+                return;
+            }
+
+            var cellId = dataGridView1.CurrentRow.Cells["Id"].Value;
+            if (cellId == null) return;
+
+            int id = Convert.ToInt32(cellId);
+
+            if (MessageBox.Show("¿Está seguro de que desea eliminar esta cita?", "Confirmar", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                using (var connection = DatabaseHelper.GetConnection())
+                {
+                    connection.Open();
+                    var cmd = connection.CreateCommand();
+                    cmd.CommandText = "DELETE FROM Citas WHERE Id = $id";
+                    cmd.Parameters.AddWithValue("$id", id);
+                    cmd.ExecuteNonQuery();
+                }
+
+                ActualizarTablaCitas(); // Refresca la tabla tras eliminar
+                LimpiarFormulario();
+            }
+        }
+
+        private void LimpiarFormulario()
+        {
             cmbCliente.SelectedIndex = -1;
-
-            for (int i = 0; i < checkedListBox1.Items.Count; i++)
-            {
-                checkedListBox1.SetItemChecked(i, false);
-            }
-
-            //  Mejora: Resetear Fecha y Combos a valores iniciales
+            cmbEstilista.SelectedIndex = -1;
+            cmbHora.SelectedIndex = -1;
+            cmbEstado.SelectedIndex = 0;
             dtpFecha.Value = DateTime.Now;
-            if (cmbEstado.Items.Count > 0) cmbEstado.SelectedIndex = 0;
-            if (cmbEstilista.Items.Count > 0) cmbEstilista.SelectedIndex = 0;
-
-            // Esto asegura que si borraste el archivo 'salon.db', el combo se vacíe de inmediato
-            try
-            {
-                var optionsBuilder = new DbContextOptionsBuilder<SalonDbContext>();
-                optionsBuilder.UseSqlite("Data Source=salon.db");
-
-                using (var db = new SalonDbContext(optionsBuilder.Options))
-                {
-                    cmbCliente.Items.Clear();
-                    var nombres = db.Clientes.Select(c => c.Nombre).ToList();
-                    foreach (var n in nombres) cmbCliente.Items.Add(n);
-                }
-            }
-            catch { /* Si el archivo no existe aún, simplemente queda vacío */ }
         }
 
-        // EVENTO CANCELAR: Cierra la ventana
-        private void btnCancelar_Click(object sender, EventArgs e)
+        private void panel3_Paint(object sender, PaintEventArgs e) { }
+
+        public class CitaSimulada
         {
-            this.Close();
+            public int Id { get; set; }
+            public string Cliente { get; set; } = string.Empty;
+            public string Fecha { get; set; } = string.Empty;
+            public string Hora { get; set; } = string.Empty;
+            public string Estilista { get; set; } = string.Empty;
+            public string Estado { get; set; } = string.Empty;
         }
     }
 }

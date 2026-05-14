@@ -28,12 +28,13 @@ namespace SalonManager.Datos
             // Precisión para decimales
             modelBuilder.Entity<Servicio>()
                 .Property(s => s.Precio).HasColumnType("decimal(10,2)");
+
             modelBuilder.Entity<CitaServicio>()
                 .Property(cs => cs.SubTotal).HasColumnType("decimal(10,2)");
-            modelBuilder.Entity<Estilista>()
-                .Property(e => e.PorcentajeComision).HasColumnType("decimal(5,2)");
+
             modelBuilder.Entity<Comision>()
                 .Property(c => c.TotalComision).HasColumnType("decimal(10,2)");
+
             modelBuilder.Entity<Producto>()
                 .Property(p => p.PrecioCompra).HasColumnType("decimal(10,2)");
         }

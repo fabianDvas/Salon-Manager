@@ -2,6 +2,8 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using SalonManager.Datos;
 using SalonManager.Datos.Repositorio;
+using System;
+using System.Windows.Forms;
 
 namespace SalonManager.UI
 {
@@ -14,25 +16,37 @@ namespace SalonManager.UI
         {
             ApplicationConfiguration.Initialize();
 
-            // 1. Crear el contenedor de servicios
             var services = new ServiceCollection();
 
-            // 2. Registrar el DbContext con SQLite
+            // 1. Configuración de la Base de Datos Única
             services.AddDbContext<SalonDbContext>(options =>
-                options.UseSqlite("Data Source=salon.db"));
+                options.UseSqlite("Data Source=SalonData.db"));
 
-            // 3. Registrar el repositorio genérico
+            // 2. Registro de Repositorios y Formularios
             services.AddScoped(typeof(IRepositorio<>), typeof(Repositorio<>));
 
-            // 4. Construir el proveedor
+            services.AddTransient<Form1>();
+            services.AddTransient<FormCita>();
+            services.AddTransient<FormEstilistas>();
+
             ServiceProvider = services.BuildServiceProvider();
 
-            // 5. Crear la BD y abrir el formulario en el mismo scope
-            using var appScope = ServiceProvider.CreateScope();
-            var db = appScope.ServiceProvider.GetRequiredService<SalonDbContext>();
-            db.Database.EnsureCreated();
+            // 3. Inicialización de la Estructura (Sincronización Forzada)
+            using (var appScope = ServiceProvider.CreateScope())
+            {
+                var db = appScope.ServiceProvider.GetRequiredService<SalonDbContext>();
+                db.Database.EnsureDeleted();
 
-            Application.Run(new Form1());
+                // Crea la base de datos nueva con el modelo actualizado
+                db.Database.EnsureCreated();
+
+                // Asegura que las tablas manuales se inicialicen correctamente
+                DatabaseHelper.InicializarBaseDeDatos();
+            }
+
+            // 4. Ejecución
+            var mainForm = ServiceProvider.GetRequiredService<Form1>();
+            Application.Run(mainForm);
         }
     }
 }

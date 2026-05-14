@@ -90,7 +90,7 @@
             btnEditarEstilista.TabIndex = 4;
             btnEditarEstilista.Text = "Editar";
             btnEditarEstilista.UseVisualStyleBackColor = false;
-            btnEditarEstilista.Click += btnEditarEstilista_Click;
+          
             // 
             // btnEliminarEstilista
             // 

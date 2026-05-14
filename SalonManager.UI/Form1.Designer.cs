@@ -45,9 +45,10 @@
             label1.BackColor = Color.IndianRed;
             label1.Font = new Font("Segoe UI", 20F);
             label1.ForeColor = SystemColors.Window;
-            label1.Location = new Point(10, 14);
+            label1.Location = new Point(14, 23);
+            label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(455, 37);
+            label1.Size = new Size(679, 54);
             label1.TabIndex = 0;
             label1.Text = "Administrador de Salones Y Barbería ";
             // 
@@ -56,10 +57,10 @@
             button1.BackColor = Color.IndianRed;
             button1.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             button1.ForeColor = SystemColors.Window;
-            button1.Location = new Point(10, 67);
-            button1.Margin = new Padding(3, 2, 3, 2);
+            button1.Location = new Point(15, 261);
+            button1.Margin = new Padding(4, 3, 4, 3);
             button1.Name = "button1";
-            button1.Size = new Size(207, 30);
+            button1.Size = new Size(296, 50);
             button1.TabIndex = 1;
             button1.Text = "Citas";
             button1.UseVisualStyleBackColor = false;
@@ -70,10 +71,10 @@
             button2.BackColor = Color.IndianRed;
             button2.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             button2.ForeColor = SystemColors.Window;
-            button2.Location = new Point(10, 112);
-            button2.Margin = new Padding(3, 2, 3, 2);
+            button2.Location = new Point(13, 112);
+            button2.Margin = new Padding(4, 3, 4, 3);
             button2.Name = "button2";
-            button2.Size = new Size(207, 30);
+            button2.Size = new Size(296, 50);
             button2.TabIndex = 2;
             button2.Text = "Clientes";
             button2.UseVisualStyleBackColor = false;
@@ -84,10 +85,10 @@
             button3.BackColor = Color.IndianRed;
             button3.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             button3.ForeColor = SystemColors.Window;
-            button3.Location = new Point(10, 163);
-            button3.Margin = new Padding(3, 2, 3, 2);
+            button3.Location = new Point(15, 189);
+            button3.Margin = new Padding(4, 3, 4, 3);
             button3.Name = "button3";
-            button3.Size = new Size(207, 30);
+            button3.Size = new Size(296, 50);
             button3.TabIndex = 3;
             button3.Text = "Estilistas";
             button3.UseVisualStyleBackColor = false;
@@ -98,10 +99,10 @@
             button4.BackColor = Color.Orange;
             button4.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             button4.ForeColor = SystemColors.Window;
-            button4.Location = new Point(10, 224);
-            button4.Margin = new Padding(3, 2, 3, 2);
+            button4.Location = new Point(14, 333);
+            button4.Margin = new Padding(4, 3, 4, 3);
             button4.Name = "button4";
-            button4.Size = new Size(207, 30);
+            button4.Size = new Size(296, 50);
             button4.TabIndex = 4;
             button4.Text = "Inventario";
             button4.UseVisualStyleBackColor = false;
@@ -112,10 +113,10 @@
             button5.BackColor = Color.Orange;
             button5.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             button5.ForeColor = SystemColors.Window;
-            button5.Location = new Point(10, 276);
-            button5.Margin = new Padding(3, 2, 3, 2);
+            button5.Location = new Point(13, 406);
+            button5.Margin = new Padding(4, 3, 4, 3);
             button5.Name = "button5";
-            button5.Size = new Size(207, 30);
+            button5.Size = new Size(296, 50);
             button5.TabIndex = 5;
             button5.Text = "Comisiones";
             button5.UseVisualStyleBackColor = false;
@@ -124,8 +125,8 @@
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(223, 51);
-            pictureBox1.Margin = new Padding(3, 2, 3, 2);
+            pictureBox1.Location = new Point(319, 85);
+            pictureBox1.Margin = new Padding(4, 3, 4, 3);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(350, 350);
             pictureBox1.SizeMode = PictureBoxSizeMode.AutoSize;
@@ -134,9 +135,9 @@
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(557, 338);
+            ClientSize = new Size(796, 563);
             Controls.Add(pictureBox1);
             Controls.Add(button5);
             Controls.Add(button4);
@@ -144,10 +145,11 @@
             Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(label1);
-            Margin = new Padding(3, 2, 3, 2);
+            Margin = new Padding(4, 3, 4, 3);
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
+            Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
