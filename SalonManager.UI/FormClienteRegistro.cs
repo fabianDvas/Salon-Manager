@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SalonManager.Datos.Entidades;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,56 +11,54 @@ namespace SalonManager.UI
 {
     public partial class FormClienteRegistro : Form
     {
-        // Esta variable guardará el cliente que estamos creando o editando
-        public ClienteSimulado Cliente { get; private set; }
+        // 1. Usamos 'Cliente' (singular) para que coincida con la base de datos
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+        public Cliente Cliente { get; set; }
 
-        // Constructor para cuando es un cliente NUEVO
+        // Constructor para NUEVO cliente
         public FormClienteRegistro()
         {
             InitializeComponent();
-            Cliente = new ClienteSimulado();
+            // Creamos un cliente vacío listo para llenar
+            this.Cliente = new Cliente();
             this.Text = "Registrar Nuevo Cliente";
         }
 
-        // Constructor para cuando vamos a EDITAR (recibe el cliente seleccionado)
-        public FormClienteRegistro(ClienteSimulado clienteAEditar)
+        // Constructor para EDITAR (recibe el cliente real, no el simulado)
+        public FormClienteRegistro(Cliente clienteAEditar)
         {
             InitializeComponent();
-            Cliente = clienteAEditar;
+            // Si mandamos un cliente de la DB, lo guardamos aquí
+            this.Cliente = clienteAEditar ?? new Cliente();
             this.Text = "Editar Datos del Cliente";
         }
 
-        // Se ejecuta al cargar la ventanita
         private void FormClienteRegistro_Load(object sender, EventArgs e)
         {
-            // Si el cliente ya tiene nombre (porque estamos editando), lo ponemos en los cuadros
-            if (!string.IsNullOrEmpty(Cliente.Nombre))
+            // Llenamos los campos si ya tenemos datos (Editar)
+            if (this.Cliente != null && !string.IsNullOrEmpty(this.Cliente.Nombre))
             {
-                txtNombre.Text = Cliente.Nombre;
-                txtTelefono.Text = Cliente.Telefono;
+                txtNombre.Text = this.Cliente.Nombre;
+                txtTelefono.Text = this.Cliente.Telefono;
             }
         }
 
-        // Botón GUARDAR
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            // Validación básica: Que no dejen el nombre vacío
             if (string.IsNullOrWhiteSpace(txtNombre.Text))
             {
-                MessageBox.Show("Por favor, escribe el nombre del cliente.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Por favor, escribe el nombre.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            // Guardamos lo que escribió la recepcionista en el objeto Cliente
-            Cliente.Nombre = txtNombre.Text;
-            Cliente.Telefono = txtTelefono.Text;
+            // Pasamos los textos al objeto que se guardará en la DB
+            this.Cliente.Nombre = txtNombre.Text;
+            this.Cliente.Telefono = txtTelefono.Text;
 
-            // Le avisamos al formulario principal que todo salió bien
             this.DialogResult = DialogResult.OK;
             this.Close();
         }
 
-        // Botón CANCELAR
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.Cancel;

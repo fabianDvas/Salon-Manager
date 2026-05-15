@@ -8,13 +8,19 @@ namespace SalonManager.UI
 {
     public partial class Form1 : Form
     {
-        // 1. Instancias persistentes: se crean una sola vez para que los datos no se borren
-        private FormClientes _frmClientes = new FormClientes();
-        private FormEstilistas _frmEstilistas = new FormEstilistas();
+        private FormClientes _frmClientes;
+        private FormEstilistas _frmEstilistas;
 
         public Form1()
         {
             InitializeComponent();
+            // 1. Buscamos la conexión real (esto ya lo tienes en tu código)
+            var context = Program.ServiceProvider.GetRequiredService<SalonDbContext>();
+
+            // 2. Ahora sí, creamos los formularios pasándole la base de datos
+            // Usamos los mismos nombres de tus variables:
+            _frmClientes = new FormClientes(context);
+            _frmEstilistas = new FormEstilistas(context);
         }
 
         private void button1_Click(object sender, EventArgs e)

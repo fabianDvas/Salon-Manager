@@ -3,79 +3,49 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Windows.Forms;
-using Microsoft.Data.Sqlite;
+using SalonManager.Datos; 
+using SalonManager.Datos.Entidades;
 
 namespace SalonManager.UI
 {
     public partial class FormEstilistas : Form
     {
-        public FormEstilistas()
+        private readonly SalonDbContext _context;
+
+        // Constructor que recibe la base de datos
+        public FormEstilistas(SalonDbContext context)
         {
             InitializeComponent();
+            _context = context;
         }
 
-        // 1. CARGA DE DATOS: Con validación de existencia de columnas
         private void ActualizarTablaEstilistas(string filtro = "")
         {
-            List<EstilistaSimulado> listaDesdeDB = new List<EstilistaSimulado>();
+            var consulta = _context.Estilistas.AsQueryable();
 
-            try
+            if (!string.IsNullOrWhiteSpace(filtro))
             {
-                using (var connection = DatabaseHelper.GetConnection())
-                {
-                    connection.Open();
-                    var command = connection.CreateCommand();
-                    command.CommandText = "SELECT * FROM Estilistas";
-
-                    if (!string.IsNullOrWhiteSpace(filtro))
-                    {
-                        command.CommandText += " WHERE Nombre LIKE $f OR Especialidad LIKE $f";
-                        command.Parameters.AddWithValue("$f", $"%{filtro}%");
-                    }
-
-                    using (SqliteDataReader reader = command.ExecuteReader())
-                    {
-                        while (reader.Read())
-                        {
-                            listaDesdeDB.Add(new EstilistaSimulado
-                            {
-                                Id = reader.GetInt32(reader.GetOrdinal("Id")),
-                                Nombre = reader.IsDBNull(reader.GetOrdinal("Nombre")) ? "" : reader.GetString(reader.GetOrdinal("Nombre")),
-                                // Si la columna no existiera por error de EF, esto lanzaría una excepción controlada
-                                Telefono = reader.IsDBNull(reader.GetOrdinal("Telefono")) ? "" : reader.GetString(reader.GetOrdinal("Telefono")),
-                                Especialidad = reader.IsDBNull(reader.GetOrdinal("Especialidad")) ? "" : reader.GetString(reader.GetOrdinal("Especialidad"))
-                            });
-                        }
-                    }
-                }
-
-                dgvEstilistas.DataSource = null;
-                dgvEstilistas.DataSource = listaDesdeDB.Select(e => new
-                {
-                    ID = e.Id,
-                    Nombre = e.Nombre,
-                    Teléfono = e.Telefono,
-                    Especialidad = e.Especialidad
-                }).ToList();
+                consulta = consulta.Where(e => e.Nombre.Contains(filtro) || e.Especialidad.Contains(filtro));
             }
-            catch (Exception ex)
+
+            dgvEstilistas.DataSource = consulta.Select(e => new
             {
-                // Si llegas aquí con el error de "Telefono", es que la clase Estilista en Datos no ha sido actualizada
-                MessageBox.Show("Aviso de Estructura: " + ex.Message, "Sincronización de Base de Datos");
-            }
+                ID = e.Id,
+                e.Nombre,
+                Teléfono = e.Telefono,
+                e.Especialidad
+            }).ToList();
         }
 
         private void FormEstilistas_Load(object sender, EventArgs e)
         {
             ActualizarTablaEstilistas();
         }
-
         private void txtBuscarEstilista_TextChanged(object sender, EventArgs e)
         {
             ActualizarTablaEstilistas(txtBuscarEstilista.Text);
         }
 
-        // 2. AGREGAR: Con el mapeo corregido de Telefono
         private void btnAgregarEstilista_Click(object sender, EventArgs e)
         {
             var ventanaRegistro = new FormEstilistaRegistro();
@@ -83,64 +53,28 @@ namespace SalonManager.UI
             if (ventanaRegistro.ShowDialog() == DialogResult.OK)
             {
                 var nuevo = ventanaRegistro.Estilista;
-                if (nuevo == null || string.IsNullOrWhiteSpace(nuevo.Nombre)) return;
 
-                try
+                //validacion
+                bool telefonoExiste = _context.Estilistas.Any(e => e.Telefono == nuevo.Telefono);
+
+                if (telefonoExiste && !string.IsNullOrWhiteSpace(nuevo.Telefono))
                 {
-                    using (var connection = DatabaseHelper.GetConnection())
-                    {
-                        connection.Open();
-                        var insert = connection.CreateCommand();
-
-                        // Aseguramos que el comando use @ para parámetros estándar de SQLite
-                        insert.CommandText = "INSERT INTO Estilistas (Nombre, Telefono, Especialidad) VALUES (@n, @t, @e)";
-                        insert.Parameters.AddWithValue("@n", nuevo.Nombre.Trim());
-                        insert.Parameters.AddWithValue("@t", nuevo.Telefono ?? "");
-                        insert.Parameters.AddWithValue("@e", nuevo.Especialidad ?? "");
-
-                        insert.ExecuteNonQuery();
-                    }
-
-                    ActualizarTablaEstilistas();
-                    MessageBox.Show("Estilista guardado correctamente.", "Éxito");
+                    MessageBox.Show("Ya existe un estilista con ese número de teléfono.", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
                 }
-                catch (Exception ex)
-                {
-                    // Si sale el error de "no column named Telefono", revisa la clase Estilista en el proyecto de Datos
-                    MessageBox.Show("Error al guardar: " + ex.Message, "Error de Base de Datos");
-                }
+
+                _context.Estilistas.Add(nuevo);
+                _context.SaveChanges();
+                ActualizarTablaEstilistas();
             }
         }
 
-        // 3. EDITAR
         private void btnEditarEstilista_Click(object sender, EventArgs e)
         {
             if (dgvEstilistas.CurrentRow == null) return;
 
-            int id = Convert.ToInt32(dgvEstilistas.CurrentRow.Cells["ID"].Value);
-            EstilistaSimulado? estilistaAEditar = null;
-
-            using (var connection = DatabaseHelper.GetConnection())
-            {
-                connection.Open();
-                var cmd = connection.CreateCommand();
-                cmd.CommandText = "SELECT * FROM Estilistas WHERE Id = @id";
-                cmd.Parameters.AddWithValue("@id", id);
-
-                using (var reader = cmd.ExecuteReader())
-                {
-                    if (reader.Read())
-                    {
-                        estilistaAEditar = new EstilistaSimulado
-                        {
-                            Id = reader.GetInt32(reader.GetOrdinal("Id")),
-                            Nombre = reader.GetString(reader.GetOrdinal("Nombre")),
-                            Telefono = reader.IsDBNull(reader.GetOrdinal("Telefono")) ? "" : reader.GetString(reader.GetOrdinal("Telefono")),
-                            Especialidad = reader.IsDBNull(reader.GetOrdinal("Especialidad")) ? "" : reader.GetString(reader.GetOrdinal("Especialidad"))
-                        };
-                    }
-                }
-            }
+            int id = Convert.ToInt32(dgvEstilistas.CurrentRow.Cells["Id"].Value);
+            var estilistaAEditar = _context.Estilistas.Find(id);
 
             if (estilistaAEditar != null)
             {
@@ -148,76 +82,44 @@ namespace SalonManager.UI
 
                 if (ventanaRegistro.ShowDialog() == DialogResult.OK)
                 {
-                    using (var connection = DatabaseHelper.GetConnection())
+                    // Validar teléfono duplicado (que no sea el de él mismo)
+                    bool duplicado = _context.Estilistas.Any(e => e.Id != id && e.Telefono == estilistaAEditar.Telefono);
+
+                    if (duplicado && !string.IsNullOrWhiteSpace(estilistaAEditar.Telefono))
                     {
-                        connection.Open();
-                        var updateCmd = connection.CreateCommand();
-                        updateCmd.CommandText = "UPDATE Estilistas SET Nombre = @n, Telefono = @t, Especialidad = @e WHERE Id = @id";
-                        updateCmd.Parameters.AddWithValue("@n", ventanaRegistro.Estilista.Nombre);
-                        updateCmd.Parameters.AddWithValue("@t", ventanaRegistro.Estilista.Telefono);
-                        updateCmd.Parameters.AddWithValue("@e", ventanaRegistro.Estilista.Especialidad);
-                        updateCmd.Parameters.AddWithValue("@id", id);
-                        updateCmd.ExecuteNonQuery();
+                        MessageBox.Show("No se pudo actualizar: El teléfono ya pertenece a otro estilista.");
+                        return;
                     }
+
+                    _context.SaveChanges();
                     ActualizarTablaEstilistas();
                 }
             }
         }
 
-        // 4. ELIMINAR
         private void btnEliminarEstilista_Click(object sender, EventArgs e)
         {
             if (dgvEstilistas.CurrentRow == null) return;
 
-            int id = Convert.ToInt32(dgvEstilistas.CurrentRow.Cells["ID"].Value);
-            string nombre = dgvEstilistas.CurrentRow.Cells["Nombre"].Value?.ToString() ?? "Estilista";
+            int id = Convert.ToInt32(dgvEstilistas.CurrentRow.Cells["Id"].Value);
+            var estilista = _context.Estilistas.Find(id);
 
-            if (MessageBox.Show($"¿Eliminar a {nombre}?", "Confirmar", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            if (estilista != null)
             {
-                using (var connection = DatabaseHelper.GetConnection())
+                if (MessageBox.Show($"¿Eliminar a {estilista.Nombre}?", "Confirmar", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
-                    connection.Open();
-                    var cmd = connection.CreateCommand();
-                    cmd.CommandText = "DELETE FROM Estilistas WHERE Id = @id";
-                    cmd.Parameters.AddWithValue("@id", id);
-                    cmd.ExecuteNonQuery();
+                    _context.Estilistas.Remove(estilista);
+                    _context.SaveChanges();
+                    ActualizarTablaEstilistas();
                 }
-                ActualizarTablaEstilistas();
             }
         }
 
-        public List<EstilistaSimulado> ObtenerListaEstilistas()
+        public List<Estilista> ObtenerListaEstilistas()
         {
-            List<EstilistaSimulado> lista = new List<EstilistaSimulado>();
-            using (var connection = DatabaseHelper.GetConnection())
-            {
-                connection.Open();
-                var cmd = connection.CreateCommand();
-                cmd.CommandText = "SELECT * FROM Estilistas";
-                using (var reader = cmd.ExecuteReader())
-                {
-                    while (reader.Read())
-                    {
-                        lista.Add(new EstilistaSimulado
-                        {
-                            Id = reader.GetInt32(reader.GetOrdinal("Id")),
-                            Nombre = reader.GetString(reader.GetOrdinal("Nombre")),
-                            Telefono = reader.IsDBNull(reader.GetOrdinal("Telefono")) ? "" : reader.GetString(reader.GetOrdinal("Telefono")),
-                            Especialidad = reader.IsDBNull(reader.GetOrdinal("Especialidad")) ? "" : reader.GetString(reader.GetOrdinal("Especialidad"))
-                        });
-                    }
-                }
-            }
-            return lista;
+            return _context.Estilistas.ToList();
         }
-    }
 
-    // El modelo interno debe tener la propiedad Telefono para evitar errores de compilación
-    public class EstilistaSimulado : IEntidadSencilla
-    {
-        public int Id { get; set; }
-        public string Nombre { get; set; } = string.Empty;
-        public string Telefono { get; set; } = string.Empty; // Asegurado
-        public string Especialidad { get; set; } = string.Empty;
+    
     }
 }

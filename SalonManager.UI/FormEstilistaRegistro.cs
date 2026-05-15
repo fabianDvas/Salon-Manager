@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SalonManager.Datos.Entidades;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,48 +12,51 @@ namespace SalonManager.UI
 {
     public partial class FormEstilistaRegistro : Form
     {
-        public EstilistaSimulado Estilista { get; private set; }
+        // 1. Usamos la entidad real de la base de datos
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+        public Estilista Estilista { get; private set; }
 
         // Constructor para un Estilista NUEVO
         public FormEstilistaRegistro()
         {
             InitializeComponent();
-            Estilista = new EstilistaSimulado();
+            // Creamos una instancia de la entidad real
+            this.Estilista = new Estilista();
             this.Text = "Registrar Nuevo Estilista";
         }
 
-        // Constructor para EDITAR un estilista existente
-        public FormEstilistaRegistro(EstilistaSimulado estilistaAEditar)
+        // Constructor para EDITAR (ahora recibe el Estilista real)
+        public FormEstilistaRegistro(Estilista estilistaAEditar)
         {
             InitializeComponent();
-            Estilista = estilistaAEditar;
+            // Si nos pasan uno, lo usamos; si no, creamos uno nuevo por seguridad
+            this.Estilista = estilistaAEditar ?? new Estilista();
             this.Text = "Editar Datos del Estilista";
         }
 
         private void FormEstilistaRegistro_Load(object sender, EventArgs e)
         {
-            // Si tiene datos (estamos editando), los cargamos en las cajas de texto
-            if (!string.IsNullOrEmpty(Estilista.Nombre))
+            // Cargamos los datos en los TXT si estamos editando
+            if (this.Estilista != null && !string.IsNullOrEmpty(this.Estilista.Nombre))
             {
-                txtNombre.Text = Estilista.Nombre;
-                txtTelefono.Text = Estilista.Telefono;
-                txtEspecialidad.Text = Estilista.Especialidad;
+                txtNombre.Text = this.Estilista.Nombre;
+                txtTelefono.Text = this.Estilista.Telefono;
+                txtEspecialidad.Text = this.Estilista.Especialidad;
             }
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            // Validamos que al menos pongan el nombre
             if (string.IsNullOrWhiteSpace(txtNombre.Text))
             {
                 MessageBox.Show("Por favor, escribe el nombre del estilista.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            // Guardamos los datos en el objeto
-            Estilista.Nombre = txtNombre.Text;
-            Estilista.Telefono = txtTelefono.Text;
-            Estilista.Especialidad = txtEspecialidad.Text;
+            // Guardamos los datos de los cuadros de texto en el objeto real
+            this.Estilista.Nombre = txtNombre.Text;
+            this.Estilista.Telefono = txtTelefono.Text;
+            this.Estilista.Especialidad = txtEspecialidad.Text;
 
             this.DialogResult = DialogResult.OK;
             this.Close();
