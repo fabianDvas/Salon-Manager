@@ -1,58 +1,50 @@
-﻿using System;
+﻿using Microsoft.Data.Sqlite;
+using Microsoft.EntityFrameworkCore;
+using SalonManager.Datos;
+using SalonManager.Datos.Entidades;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Windows.Forms;
-using Microsoft.Data.Sqlite;
 
 namespace SalonManager.UI
 {
     public partial class FormCita : Form
     {
-        private List<IEntidadSencilla>? _clientes;
-        private List<IEntidadSencilla>? _estilistas;
         private int? _idCitaSeleccionada = null;
+        private readonly SalonDbContext _context;
 
-        public FormCita(IEnumerable<IEntidadSencilla> clientes, IEnumerable<IEntidadSencilla> estilistas)
+        public FormCita(SalonDbContext context)
         {
             InitializeComponent();
-            _clientes = clientes.ToList();
-            _estilistas = estilistas.ToList();
-
+            _context = context;
             CargarCombos();
             ActualizarTablaCitas();
         }
 
         private void CargarCombos()
         {
-            if (_clientes != null)
-            {
-                cmbCliente.DataSource = null;
-                cmbCliente.DataSource = _clientes;
-                cmbCliente.DisplayMember = "Nombre";
-                cmbCliente.ValueMember = "Id";
-                cmbCliente.SelectedIndex = -1;
-            }
+            // para Clientes
+            cmbCliente.DisplayMember = "Nombre";
+            cmbCliente.ValueMember = "Id"; // O ClienteId
+            cmbCliente.DataSource = _context.Clientes.ToList();
+            cmbCliente.SelectedIndex = -1;
+            // PARA Estilistas
+            cmbEstilista.DisplayMember = "Nombre";
+            cmbEstilista.ValueMember = "Id"; // El que arreglamos recién
+            cmbEstilista.DataSource = _context.Estilistas.ToList();
+            cmbEstilista.SelectedIndex = -1;
 
-            if (_estilistas != null)
-            {
-                cmbEstilista.DataSource = null;
-                cmbEstilista.DataSource = _estilistas;
-                cmbEstilista.DisplayMember = "Nombre";
-                cmbEstilista.ValueMember = "Id";
-                cmbEstilista.SelectedIndex = -1;
-            }
-
+            // Horas y Estados se quedan igual
             cmbHora.Items.Clear();
             cmbHora.Items.AddRange(new string[] {
-                "08:00 AM", "09:00 AM", "10:00 AM", "11:00 AM",
-                "02:00 PM", "03:00 PM", "04:00 PM", "05:00 PM"
-            });
+        "08:00 AM", "09:00 AM", "10:00 AM", "11:00 AM",
+        "02:00 PM", "03:00 PM", "04:00 PM", "05:00 PM"
+    });
 
             cmbEstado.Items.Clear();
-            cmbEstado.Items.Add("Pendiente");
-            cmbEstado.Items.Add("Completada");
-            cmbEstado.Items.Add("Cancelada");
+            cmbEstado.Items.AddRange(new string[] { "Pendiente", "Completada", "Cancelada" });
             cmbEstado.SelectedIndex = 0;
         }
 
@@ -88,7 +80,7 @@ namespace SalonManager.UI
             }
 
             // Ajustes importantes para evitar problemas de columnas de FormCitas
-            dataGridView1.Columns.Clear(); 
+            dataGridView1.Columns.Clear();
             dataGridView1.DataSource = null;
             dataGridView1.AutoGenerateColumns = true;
             dataGridView1.DataSource = listaCitas; // Asigna los datos nuevos
@@ -106,15 +98,21 @@ namespace SalonManager.UI
                 return;
             }
 
-            var cliente = (IEntidadSencilla)cmbCliente.SelectedItem!;
-            var estilista = (IEntidadSencilla)cmbEstilista.SelectedItem!;
+            var cliente = cmbCliente.SelectedItem as Cliente;
+            var estilista = cmbEstilista.SelectedItem as Estilista;
+
+            if (cliente == null || estilista == null)
+            {
+                MessageBox.Show("Por favor, seleccione un cliente y un estilista válidos.", "Faltan datos");
+                return;
+            }
 
             using (var connection = DatabaseHelper.GetConnection())
             {
                 connection.Open();
                 var command = connection.CreateCommand();
 
-                if (_idCitaSeleccionada == null)
+                    if (_idCitaSeleccionada == null)
                 {
                     command.CommandText = @"INSERT INTO Citas (Cliente, Fecha, Hora, Estilista, Estado) 
                                             VALUES ($cli, $fec, $hor, $est, $estd)";
@@ -217,6 +215,11 @@ namespace SalonManager.UI
             public string Hora { get; set; } = string.Empty;
             public string Estilista { get; set; } = string.Empty;
             public string Estado { get; set; } = string.Empty;
+        }
+
+        private void FormCita_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

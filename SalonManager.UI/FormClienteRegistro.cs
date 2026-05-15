@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SalonManager.Datos.Entidades;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,22 +12,24 @@ namespace SalonManager.UI
     public partial class FormClienteRegistro : Form
     {
         // Esta variable guardará el cliente que estamos creando o editando
-        public ClienteSimulado Cliente { get; private set; }
+        public Cliente Cliente { get; private set; }
 
         // Constructor para cuando es un cliente NUEVO
         public FormClienteRegistro()
         {
             InitializeComponent();
-            Cliente = new ClienteSimulado();
+            Cliente = new Cliente(); // Creamos un objeto vacío listo para llenar
             this.Text = "Registrar Nuevo Cliente";
         }
 
         // Constructor para cuando vamos a EDITAR (recibe el cliente seleccionado)
-        public FormClienteRegistro(ClienteSimulado clienteAEditar)
+        public FormClienteRegistro(Cliente clienteAEditar)
         {
             InitializeComponent();
             Cliente = clienteAEditar;
-            this.Text = "Editar Datos del Cliente";
+            txtNombre.Text = Cliente.Nombre;
+            txtTelefono.Text = Cliente.Telefono;
+            this.Text = "Editar Cliente";
         }
 
         // Se ejecuta al cargar la ventanita

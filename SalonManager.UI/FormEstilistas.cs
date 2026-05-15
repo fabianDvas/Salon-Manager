@@ -1,17 +1,20 @@
-﻿using System;
+﻿using Microsoft.Data.Sqlite;
+using SalonManager.Datos;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Windows.Forms;
-using Microsoft.Data.Sqlite;
 
 namespace SalonManager.UI
 {
     public partial class FormEstilistas : Form
     {
-        public FormEstilistas()
+        private readonly SalonDbContext _context;
+        public FormEstilistas(SalonDbContext context)
         {
             InitializeComponent();
+            _context = context;
         }
 
         // 1. CARGA DE DATOS: Con validación de existencia de columnas

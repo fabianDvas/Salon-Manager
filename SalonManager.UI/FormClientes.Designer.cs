@@ -90,7 +90,7 @@
             btnEditarCliente.TabIndex = 4;
             btnEditarCliente.Text = "Editar";
             btnEditarCliente.UseVisualStyleBackColor = false;
-            btnEditarCliente.Click += btnEditarCliente_Click;
+            
             // 
             // btnEliminarCliente
             // 
