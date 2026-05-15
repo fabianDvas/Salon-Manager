@@ -1,70 +1,26 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\User\\source\\repos\\Salon-Manager.git4\\",
+  "WorkspaceRootPath": "C:\\Users\\Erickson\\Downloads\\Salon-Manager\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D979BFF1-37A0-FB27-A325-E61F65C4A908}|SalonManager.UI\\SalonManager.UI.csproj|C:\\Users\\User\\source\\repos\\Salon-Manager.git4\\salonmanager.ui\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{D979BFF1-37A0-FB27-A325-E61F65C4A908}|SalonManager.UI\\SalonManager.UI.csproj|solutionrelative:salonmanager.ui\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D979BFF1-37A0-FB27-A325-E61F65C4A908}|SalonManager.UI\\SalonManager.UI.csproj|c:\\users\\user\\source\\repos\\salon-manager.git4\\salonmanager.ui\\databasehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D979BFF1-37A0-FB27-A325-E61F65C4A908}|SalonManager.UI\\SalonManager.UI.csproj|solutionrelative:salonmanager.ui\\databasehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D979BFF1-37A0-FB27-A325-E61F65C4A908}|SalonManager.UI\\SalonManager.UI.csproj|c:\\users\\user\\source\\repos\\salon-manager.git4\\salonmanager.ui\\formcita.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D979BFF1-37A0-FB27-A325-E61F65C4A908}|SalonManager.UI\\SalonManager.UI.csproj|solutionrelative:salonmanager.ui\\formcita.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D979BFF1-37A0-FB27-A325-E61F65C4A908}|SalonManager.UI\\SalonManager.UI.csproj|c:\\users\\user\\source\\repos\\salon-manager.git4\\salonmanager.ui\\formestilistas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D979BFF1-37A0-FB27-A325-E61F65C4A908}|SalonManager.UI\\SalonManager.UI.csproj|solutionrelative:salonmanager.ui\\formestilistas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D979BFF1-37A0-FB27-A325-E61F65C4A908}|SalonManager.UI\\SalonManager.UI.csproj|C:\\Users\\User\\source\\repos\\Salon-Manager.git4\\salonmanager.ui\\formcita.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{D979BFF1-37A0-FB27-A325-E61F65C4A908}|SalonManager.UI\\SalonManager.UI.csproj|C:\\Users\\Erickson\\Downloads\\Salon-Manager\\salonmanager.ui\\formcita.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{D979BFF1-37A0-FB27-A325-E61F65C4A908}|SalonManager.UI\\SalonManager.UI.csproj|solutionrelative:salonmanager.ui\\formcita.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D979BFF1-37A0-FB27-A325-E61F65C4A908}|SalonManager.UI\\SalonManager.UI.csproj|c:\\users\\user\\source\\repos\\salon-manager.git4\\salonmanager.ui\\formclientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D979BFF1-37A0-FB27-A325-E61F65C4A908}|SalonManager.UI\\SalonManager.UI.csproj|solutionrelative:salonmanager.ui\\formclientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D979BFF1-37A0-FB27-A325-E61F65C4A908}|SalonManager.UI\\SalonManager.UI.csproj|C:\\Users\\Erickson\\Downloads\\Salon-Manager\\salonmanager.ui\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D979BFF1-37A0-FB27-A325-E61F65C4A908}|SalonManager.UI\\SalonManager.UI.csproj|solutionrelative:salonmanager.ui\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{41E57056-93A8-77E5-F296-50EF18C4A153}|SalonManager.Datos\\SalonManager.Datos.csproj|c:\\users\\user\\source\\repos\\salon-manager.git4\\salonmanager.datos\\salondbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{41E57056-93A8-77E5-F296-50EF18C4A153}|SalonManager.Datos\\SalonManager.Datos.csproj|solutionrelative:salonmanager.datos\\salondbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D979BFF1-37A0-FB27-A325-E61F65C4A908}|SalonManager.UI\\SalonManager.UI.csproj|c:\\users\\erickson\\downloads\\salon-manager\\salonmanager.ui\\formproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D979BFF1-37A0-FB27-A325-E61F65C4A908}|SalonManager.UI\\SalonManager.UI.csproj|solutionrelative:salonmanager.ui\\formproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{41E57056-93A8-77E5-F296-50EF18C4A153}|SalonManager.Datos\\SalonManager.Datos.csproj|c:\\users\\user\\source\\repos\\salon-manager.git4\\salonmanager.datos\\entidades\\estilista.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{41E57056-93A8-77E5-F296-50EF18C4A153}|SalonManager.Datos\\SalonManager.Datos.csproj|solutionrelative:salonmanager.datos\\entidades\\estilista.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D979BFF1-37A0-FB27-A325-E61F65C4A908}|SalonManager.UI\\SalonManager.UI.csproj|c:\\users\\erickson\\downloads\\salon-manager\\salonmanager.ui\\formestilistaregistro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D979BFF1-37A0-FB27-A325-E61F65C4A908}|SalonManager.UI\\SalonManager.UI.csproj|solutionrelative:salonmanager.ui\\formestilistaregistro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D979BFF1-37A0-FB27-A325-E61F65C4A908}|SalonManager.UI\\SalonManager.UI.csproj|c:\\users\\user\\source\\repos\\salon-manager.git4\\salonmanager.ui\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D979BFF1-37A0-FB27-A325-E61F65C4A908}|SalonManager.UI\\SalonManager.UI.csproj|solutionrelative:salonmanager.ui\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D979BFF1-37A0-FB27-A325-E61F65C4A908}|SalonManager.UI\\SalonManager.UI.csproj|c:\\users\\user\\source\\repos\\salon-manager.git4\\salonmanager.ui\\formcita.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D979BFF1-37A0-FB27-A325-E61F65C4A908}|SalonManager.UI\\SalonManager.UI.csproj|solutionrelative:salonmanager.ui\\formcita.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D979BFF1-37A0-FB27-A325-E61F65C4A908}|SalonManager.UI\\SalonManager.UI.csproj|C:\\Users\\User\\source\\repos\\Salon-Manager.git4\\salonmanager.ui\\formestilistas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{D979BFF1-37A0-FB27-A325-E61F65C4A908}|SalonManager.UI\\SalonManager.UI.csproj|solutionrelative:salonmanager.ui\\formestilistas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D979BFF1-37A0-FB27-A325-E61F65C4A908}|SalonManager.UI\\SalonManager.UI.csproj|c:\\users\\user\\source\\repos\\salon-manager.git4\\salonmanager.ui\\formestilistas.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D979BFF1-37A0-FB27-A325-E61F65C4A908}|SalonManager.UI\\SalonManager.UI.csproj|solutionrelative:salonmanager.ui\\formestilistas.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D979BFF1-37A0-FB27-A325-E61F65C4A908}|SalonManager.UI\\SalonManager.UI.csproj|C:\\Users\\User\\source\\repos\\Salon-Manager.git4\\salonmanager.ui\\formclientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{D979BFF1-37A0-FB27-A325-E61F65C4A908}|SalonManager.UI\\SalonManager.UI.csproj|solutionrelative:salonmanager.ui\\formclientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D979BFF1-37A0-FB27-A325-E61F65C4A908}|SalonManager.UI\\SalonManager.UI.csproj|c:\\users\\user\\source\\repos\\salon-manager.git4\\salonmanager.ui\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D979BFF1-37A0-FB27-A325-E61F65C4A908}|SalonManager.UI\\SalonManager.UI.csproj|solutionrelative:salonmanager.ui\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D979BFF1-37A0-FB27-A325-E61F65C4A908}|SalonManager.UI\\SalonManager.UI.csproj|c:\\users\\user\\source\\repos\\salon-manager.git4\\salonmanager.ui\\ientidadsencilla.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D979BFF1-37A0-FB27-A325-E61F65C4A908}|SalonManager.UI\\SalonManager.UI.csproj|solutionrelative:salonmanager.ui\\ientidadsencilla.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D979BFF1-37A0-FB27-A325-E61F65C4A908}|SalonManager.UI\\SalonManager.UI.csproj|c:\\users\\user\\source\\repos\\salon-manager.git4\\salonmanager.ui\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D979BFF1-37A0-FB27-A325-E61F65C4A908}|SalonManager.UI\\SalonManager.UI.csproj|solutionrelative:salonmanager.ui\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D979BFF1-37A0-FB27-A325-E61F65C4A908}|SalonManager.UI\\SalonManager.UI.csproj|c:\\users\\erickson\\downloads\\salon-manager\\salonmanager.ui\\forminventario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D979BFF1-37A0-FB27-A325-E61F65C4A908}|SalonManager.UI\\SalonManager.UI.csproj|solutionrelative:salonmanager.ui\\forminventario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -74,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -86,209 +42,67 @@
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "FormEstilistas.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\Salon-Manager.git4\\SalonManager.UI\\FormEstilistas.cs",
-              "RelativeDocumentMoniker": "SalonManager.UI\\FormEstilistas.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\Salon-Manager.git4\\SalonManager.UI\\FormEstilistas.cs",
-              "RelativeToolTip": "SalonManager.UI\\FormEstilistas.cs",
-              "ViewState": "AgIAANAAAAAAAAAAAAASwN4AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-13T23:34:11.581Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "DatabaseHelper.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\Salon-Manager.git4\\SalonManager.UI\\DatabaseHelper.cs",
-              "RelativeDocumentMoniker": "SalonManager.UI\\DatabaseHelper.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\Salon-Manager.git4\\SalonManager.UI\\DatabaseHelper.cs",
-              "RelativeToolTip": "SalonManager.UI\\DatabaseHelper.cs",
-              "ViewState": "AgIAAC4AAAAAAAAAAADwvz8AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-14T01:01:16.531Z",
-              "EditorCaption": ""
+              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "FormCita.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\Salon-Manager.git4\\SalonManager.UI\\FormCita.cs",
-              "RelativeDocumentMoniker": "SalonManager.UI\\FormCita.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\Salon-Manager.git4\\SalonManager.UI\\FormCita.cs",
-              "RelativeToolTip": "SalonManager.UI\\FormCita.cs",
-              "ViewState": "AgIAAGAAAAAAAAAAAAAvwG8AAAAkAAAAAAAAAA==",
+              "Title": "FormProducto.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Erickson\\Downloads\\Salon-Manager\\SalonManager.UI\\FormProducto.cs",
+              "RelativeDocumentMoniker": "SalonManager.UI\\FormProducto.cs",
+              "ToolTip": "C:\\Users\\Erickson\\Downloads\\Salon-Manager\\SalonManager.UI\\FormProducto.cs [Dise\u00F1o]",
+              "RelativeToolTip": "SalonManager.UI\\FormProducto.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-13T22:11:51.886Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-15T01:33:12.35Z",
+              "EditorCaption": " [Dise\u00F1o]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "FormClientes.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\Salon-Manager.git4\\SalonManager.UI\\FormClientes.cs",
-              "RelativeDocumentMoniker": "SalonManager.UI\\FormClientes.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\Salon-Manager.git4\\SalonManager.UI\\FormClientes.cs",
-              "RelativeToolTip": "SalonManager.UI\\FormClientes.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAYwKAAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-13T23:33:02.901Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Form1.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\Salon-Manager.git4\\SalonManager.UI\\Form1.cs",
+              "DocumentMoniker": "C:\\Users\\Erickson\\Downloads\\Salon-Manager\\SalonManager.UI\\Form1.cs",
               "RelativeDocumentMoniker": "SalonManager.UI\\Form1.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\Salon-Manager.git4\\SalonManager.UI\\Form1.cs [Dise\u00F1o]",
+              "ToolTip": "C:\\Users\\Erickson\\Downloads\\Salon-Manager\\SalonManager.UI\\Form1.cs [Dise\u00F1o]",
               "RelativeToolTip": "SalonManager.UI\\Form1.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-14T00:01:02.063Z",
               "EditorCaption": " [Dise\u00F1o]"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FormCita.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Erickson\\Downloads\\Salon-Manager\\SalonManager.UI\\FormCita.cs",
+              "RelativeDocumentMoniker": "SalonManager.UI\\FormCita.cs",
+              "ToolTip": "C:\\Users\\Erickson\\Downloads\\Salon-Manager\\SalonManager.UI\\FormCita.cs [Dise\u00F1o]",
+              "RelativeToolTip": "SalonManager.UI\\FormCita.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-13T23:32:03.041Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "FormEstilistaRegistro.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Erickson\\Downloads\\Salon-Manager\\SalonManager.UI\\FormEstilistaRegistro.cs",
+              "RelativeDocumentMoniker": "SalonManager.UI\\FormEstilistaRegistro.cs",
+              "ToolTip": "C:\\Users\\Erickson\\Downloads\\Salon-Manager\\SalonManager.UI\\FormEstilistaRegistro.cs [Dise\u00F1o]",
+              "RelativeToolTip": "SalonManager.UI\\FormEstilistaRegistro.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-15T01:33:17.899Z",
+              "EditorCaption": " [Dise\u00F1o]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "FormCita.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\Salon-Manager.git4\\SalonManager.UI\\FormCita.cs",
-              "RelativeDocumentMoniker": "SalonManager.UI\\FormCita.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\Salon-Manager.git4\\SalonManager.UI\\FormCita.cs [Dise\u00F1o]",
-              "RelativeToolTip": "SalonManager.UI\\FormCita.cs [Dise\u00F1o]",
+              "Title": "FormInventario.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Erickson\\Downloads\\Salon-Manager\\SalonManager.UI\\FormInventario.cs",
+              "RelativeDocumentMoniker": "SalonManager.UI\\FormInventario.cs",
+              "ToolTip": "C:\\Users\\Erickson\\Downloads\\Salon-Manager\\SalonManager.UI\\FormInventario.cs [Dise\u00F1o]",
+              "RelativeToolTip": "SalonManager.UI\\FormInventario.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-13T23:32:03.041Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "SalonDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\Salon-Manager.git4\\SalonManager.Datos\\SalonDbContext.cs",
-              "RelativeDocumentMoniker": "SalonManager.Datos\\SalonDbContext.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\Salon-Manager.git4\\SalonManager.Datos\\SalonDbContext.cs",
-              "RelativeToolTip": "SalonManager.Datos\\SalonDbContext.cs",
-              "ViewState": "AgIAABcAAAAAAAAAAAAUwCAAAABMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-14T02:19:11.202Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Estilista.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\Salon-Manager.git4\\SalonManager.Datos\\Entidades\\Estilista.cs",
-              "RelativeDocumentMoniker": "SalonManager.Datos\\Entidades\\Estilista.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\Salon-Manager.git4\\SalonManager.Datos\\Entidades\\Estilista.cs",
-              "RelativeToolTip": "SalonManager.Datos\\Entidades\\Estilista.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAABAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-14T02:20:37.445Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\Salon-Manager.git4\\SalonManager.UI\\Program.cs",
-              "RelativeDocumentMoniker": "SalonManager.UI\\Program.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\Salon-Manager.git4\\SalonManager.UI\\Program.cs",
-              "RelativeToolTip": "SalonManager.UI\\Program.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAADwvyQAAABXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-13T23:36:47.578Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "FormCita.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\Salon-Manager.git4\\SalonManager.UI\\FormCita.Designer.cs",
-              "RelativeDocumentMoniker": "SalonManager.UI\\FormCita.Designer.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\Salon-Manager.git4\\SalonManager.UI\\FormCita.Designer.cs",
-              "RelativeToolTip": "SalonManager.UI\\FormCita.Designer.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAADgvw8AAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-13T23:25:37.265Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "FormEstilistas.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\Salon-Manager.git4\\SalonManager.UI\\FormEstilistas.Designer.cs",
-              "RelativeDocumentMoniker": "SalonManager.UI\\FormEstilistas.Designer.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\Salon-Manager.git4\\SalonManager.UI\\FormEstilistas.Designer.cs",
-              "RelativeToolTip": "SalonManager.UI\\FormEstilistas.Designer.cs",
-              "ViewState": "AgIAAE0AAAAAAAAAAAAiwFwAAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-14T01:12:32.896Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "FormEstilistas.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\Salon-Manager.git4\\SalonManager.UI\\FormEstilistas.cs",
-              "RelativeDocumentMoniker": "SalonManager.UI\\FormEstilistas.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\Salon-Manager.git4\\SalonManager.UI\\FormEstilistas.cs [Dise\u00F1o]",
-              "RelativeToolTip": "SalonManager.UI\\FormEstilistas.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-14T01:15:34.173Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "FormClientes.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\Salon-Manager.git4\\SalonManager.UI\\FormClientes.cs",
-              "RelativeDocumentMoniker": "SalonManager.UI\\FormClientes.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\Salon-Manager.git4\\SalonManager.UI\\FormClientes.cs [Dise\u00F1o]",
-              "RelativeToolTip": "SalonManager.UI\\FormClientes.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-13T23:32:54.211Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "Form1.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\Salon-Manager.git4\\SalonManager.UI\\Form1.Designer.cs",
-              "RelativeDocumentMoniker": "SalonManager.UI\\Form1.Designer.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\Salon-Manager.git4\\SalonManager.UI\\Form1.Designer.cs",
-              "RelativeToolTip": "SalonManager.UI\\Form1.Designer.cs",
-              "ViewState": "AgIAAFkAAAAAAAAAAAAjwGwAAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-14T00:05:52.154Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "IEntidadSencilla.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\Salon-Manager.git4\\SalonManager.UI\\IEntidadSencilla.cs",
-              "RelativeDocumentMoniker": "SalonManager.UI\\IEntidadSencilla.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\Salon-Manager.git4\\SalonManager.UI\\IEntidadSencilla.cs",
-              "RelativeToolTip": "SalonManager.UI\\IEntidadSencilla.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAYAAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-14T00:37:10.389Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Form1.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\Salon-Manager.git4\\SalonManager.UI\\Form1.cs",
-              "RelativeDocumentMoniker": "SalonManager.UI\\Form1.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\Salon-Manager.git4\\SalonManager.UI\\Form1.cs",
-              "RelativeToolTip": "SalonManager.UI\\Form1.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAIA2wCMAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-13T23:38:36.684Z"
+              "WhenOpened": "2026-05-15T01:33:06.535Z",
+              "EditorCaption": " [Dise\u00F1o]"
             }
           ]
         }
