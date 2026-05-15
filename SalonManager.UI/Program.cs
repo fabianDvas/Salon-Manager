@@ -35,7 +35,6 @@ namespace SalonManager.UI
             using (var appScope = ServiceProvider.CreateScope())
             {
                 var db = appScope.ServiceProvider.GetRequiredService<SalonDbContext>();
-                db.Database.EnsureDeleted();
 
                 // Crea la base de datos nueva con el modelo actualizado
                 db.Database.EnsureCreated();
