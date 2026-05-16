@@ -40,29 +40,26 @@
             // dgvClientes
             // 
             dgvClientes.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvClientes.Location = new Point(24, 100);
-            dgvClientes.Margin = new Padding(2, 2, 2, 2);
+            dgvClientes.Location = new Point(34, 167);
             dgvClientes.Name = "dgvClientes";
             dgvClientes.RowHeadersWidth = 62;
-            dgvClientes.Size = new Size(472, 327);
+            dgvClientes.Size = new Size(674, 545);
             dgvClientes.TabIndex = 0;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(27, 75);
-            label1.Margin = new Padding(2, 0, 2, 0);
+            label1.Location = new Point(39, 125);
             label1.Name = "label1";
-            label1.Size = new Size(85, 15);
+            label1.Size = new Size(125, 25);
             label1.TabIndex = 1;
             label1.Text = "Buscar Cliente:";
             // 
             // txtBuscarCliente
             // 
-            txtBuscarCliente.Location = new Point(116, 71);
-            txtBuscarCliente.Margin = new Padding(2, 2, 2, 2);
+            txtBuscarCliente.Location = new Point(166, 118);
             txtBuscarCliente.Name = "txtBuscarCliente";
-            txtBuscarCliente.Size = new Size(169, 23);
+            txtBuscarCliente.Size = new Size(240, 31);
             txtBuscarCliente.TabIndex = 2;
             txtBuscarCliente.TextChanged += txtBuscarCliente_TextChanged;
             // 
@@ -70,10 +67,9 @@
             // 
             btnAgregarCliente.BackColor = Color.MediumSeaGreen;
             btnAgregarCliente.ForeColor = SystemColors.ButtonHighlight;
-            btnAgregarCliente.Location = new Point(57, 24);
-            btnAgregarCliente.Margin = new Padding(2, 2, 2, 2);
+            btnAgregarCliente.Location = new Point(81, 40);
             btnAgregarCliente.Name = "btnAgregarCliente";
-            btnAgregarCliente.Size = new Size(127, 28);
+            btnAgregarCliente.Size = new Size(181, 47);
             btnAgregarCliente.TabIndex = 3;
             btnAgregarCliente.Text = "+ Agregar Cliente";
             btnAgregarCliente.UseVisualStyleBackColor = false;
@@ -83,23 +79,21 @@
             // 
             btnEditarCliente.BackColor = Color.SteelBlue;
             btnEditarCliente.ForeColor = SystemColors.ButtonHighlight;
-            btnEditarCliente.Location = new Point(189, 24);
-            btnEditarCliente.Margin = new Padding(2, 2, 2, 2);
+            btnEditarCliente.Location = new Point(270, 40);
             btnEditarCliente.Name = "btnEditarCliente";
-            btnEditarCliente.Size = new Size(127, 28);
+            btnEditarCliente.Size = new Size(181, 47);
             btnEditarCliente.TabIndex = 4;
             btnEditarCliente.Text = "Editar";
             btnEditarCliente.UseVisualStyleBackColor = false;
-            
+            btnEditarCliente.Click += btnEditarCliente_Click;
             // 
             // btnEliminarCliente
             // 
             btnEliminarCliente.BackColor = Color.IndianRed;
             btnEliminarCliente.ForeColor = SystemColors.ButtonHighlight;
-            btnEliminarCliente.Location = new Point(321, 24);
-            btnEliminarCliente.Margin = new Padding(2, 2, 2, 2);
+            btnEliminarCliente.Location = new Point(459, 40);
             btnEliminarCliente.Name = "btnEliminarCliente";
-            btnEliminarCliente.Size = new Size(127, 28);
+            btnEliminarCliente.Size = new Size(181, 47);
             btnEliminarCliente.TabIndex = 5;
             btnEliminarCliente.Text = "- Eliminar";
             btnEliminarCliente.UseVisualStyleBackColor = false;
@@ -107,16 +101,15 @@
             // 
             // FormClientes
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(560, 434);
+            ClientSize = new Size(800, 723);
             Controls.Add(btnEliminarCliente);
             Controls.Add(btnEditarCliente);
             Controls.Add(btnAgregarCliente);
             Controls.Add(txtBuscarCliente);
             Controls.Add(label1);
             Controls.Add(dgvClientes);
-            Margin = new Padding(2, 2, 2, 2);
             Name = "FormClientes";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "FormClientes";

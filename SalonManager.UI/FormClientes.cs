@@ -52,23 +52,34 @@ namespace SalonManager.UI
 
         private void btnAgregarCliente_Click(object sender, EventArgs e)
         {
+            // Usamos la inicialización que evita errores de diseño
             var ventanaRegistro = new FormClienteRegistro(new Cliente());
 
             if (ventanaRegistro.ShowDialog() == DialogResult.OK)
             {
-                // El objeto que viene de la ventana de registro
                 var clienteDeVentana = ventanaRegistro.Cliente;
 
-                // Creamos la entidad real para la base de datos
-                var nuevoCliente = new Cliente 
+                // ---  VALIDACIÓN ---
+                bool yaExiste = _context.Clientes.Any(c =>
+                    c.Nombre.ToLower() == clienteDeVentana.Nombre.ToLower() ||
+                    c.Telefono == clienteDeVentana.Telefono);
+
+                if (yaExiste)
+                {
+                    MessageBox.Show("¡Atención! Ya existe un cliente con ese nombre o teléfono.", "Duplicado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return; // Detiene el guardado si es un duplicado
+                }
+
+                // Creamos la entidad limpia para la base de datos
+                var nuevoCliente = new Cliente
                 {
                     Nombre = clienteDeVentana.Nombre,
                     Telefono = clienteDeVentana.Telefono
                 };
 
-                // Guardar en Base de Datos
+                // Guardar en Base de Datos de forma segura
                 _context.Clientes.Add(nuevoCliente);
-                _context.SaveChanges(); 
+                _context.SaveChanges();
 
                 ActualizarTablaClientes();
                 MessageBox.Show("Cliente guardado en la base de datos con éxito.", "Éxito");
@@ -87,7 +98,36 @@ namespace SalonManager.UI
                 if (cliente != null)
                 {
                     _context.Clientes.Remove(cliente);
-                    _context.SaveChanges(); 
+                    _context.SaveChanges();
+                    ActualizarTablaClientes();
+                }
+            }
+        }
+
+        private void btnEditarCliente_Click(object sender, EventArgs e)
+        {
+            if (dgvClientes.CurrentRow == null) return;
+
+            int id = Convert.ToInt32(dgvClientes.CurrentRow.Cells["ID"].Value);
+            var clienteAEditar = _context.Clientes.Find(id); // Busca directo en la BD
+
+            if (clienteAEditar != null)
+            {
+                var ventanaRegistro = new FormClienteRegistro(clienteAEditar);
+
+                if (ventanaRegistro.ShowDialog() == DialogResult.OK)
+                {
+                    // Validar que al editar no choque con otro cliente existente
+                    bool duplicado = _context.Clientes.Any(c =>
+                        c.ClienteId != id && (c.Nombre == clienteAEditar.Nombre || c.Telefono == clienteAEditar.Telefono));
+
+                    if (duplicado)
+                    {
+                        MessageBox.Show("Error: Los datos ya pertenecen a otro cliente.");
+                        return;
+                    }
+
+                    _context.SaveChanges(); // Guarda los cambios del objeto editado
                     ActualizarTablaClientes();
                 }
             }

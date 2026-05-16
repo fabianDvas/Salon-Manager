@@ -40,29 +40,26 @@
             // dgvEstilistas
             // 
             dgvEstilistas.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvEstilistas.Location = new Point(1, 112);
-            dgvEstilistas.Margin = new Padding(2, 2, 2, 2);
+            dgvEstilistas.Location = new Point(1, 187);
             dgvEstilistas.Name = "dgvEstilistas";
             dgvEstilistas.RowHeadersWidth = 62;
-            dgvEstilistas.Size = new Size(550, 268);
+            dgvEstilistas.Size = new Size(786, 447);
             dgvEstilistas.TabIndex = 0;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(8, 86);
-            label1.Margin = new Padding(2, 0, 2, 0);
+            label1.Location = new Point(11, 143);
             label1.Name = "label1";
-            label1.Size = new Size(87, 15);
+            label1.Size = new Size(130, 25);
             label1.TabIndex = 1;
             label1.Text = "Buscar Estilista:";
             // 
             // txtBuscarEstilista
             // 
-            txtBuscarEstilista.Location = new Point(104, 82);
-            txtBuscarEstilista.Margin = new Padding(2, 2, 2, 2);
+            txtBuscarEstilista.Location = new Point(149, 137);
             txtBuscarEstilista.Name = "txtBuscarEstilista";
-            txtBuscarEstilista.Size = new Size(210, 23);
+            txtBuscarEstilista.Size = new Size(298, 31);
             txtBuscarEstilista.TabIndex = 2;
             txtBuscarEstilista.TextChanged += txtBuscarEstilista_TextChanged;
             // 
@@ -70,10 +67,9 @@
             // 
             btnAgregarEstilista.BackColor = Color.MediumSeaGreen;
             btnAgregarEstilista.ForeColor = SystemColors.ButtonHighlight;
-            btnAgregarEstilista.Location = new Point(430, 9);
-            btnAgregarEstilista.Margin = new Padding(2, 2, 2, 2);
+            btnAgregarEstilista.Location = new Point(614, 15);
             btnAgregarEstilista.Name = "btnAgregarEstilista";
-            btnAgregarEstilista.Size = new Size(107, 31);
+            btnAgregarEstilista.Size = new Size(153, 52);
             btnAgregarEstilista.TabIndex = 3;
             btnAgregarEstilista.Text = "+ Agregar";
             btnAgregarEstilista.UseVisualStyleBackColor = false;
@@ -83,23 +79,21 @@
             // 
             btnEditarEstilista.BackColor = Color.SteelBlue;
             btnEditarEstilista.ForeColor = SystemColors.ButtonHighlight;
-            btnEditarEstilista.Location = new Point(430, 43);
-            btnEditarEstilista.Margin = new Padding(2, 2, 2, 2);
+            btnEditarEstilista.Location = new Point(614, 72);
             btnEditarEstilista.Name = "btnEditarEstilista";
-            btnEditarEstilista.Size = new Size(107, 29);
+            btnEditarEstilista.Size = new Size(153, 48);
             btnEditarEstilista.TabIndex = 4;
             btnEditarEstilista.Text = "Editar";
             btnEditarEstilista.UseVisualStyleBackColor = false;
-          
+            btnEditarEstilista.Click += btnEditarEstilista_Click;
             // 
             // btnEliminarEstilista
             // 
             btnEliminarEstilista.BackColor = Color.IndianRed;
             btnEliminarEstilista.ForeColor = SystemColors.ButtonHighlight;
-            btnEliminarEstilista.Location = new Point(430, 76);
-            btnEliminarEstilista.Margin = new Padding(2, 2, 2, 2);
+            btnEliminarEstilista.Location = new Point(614, 127);
             btnEliminarEstilista.Name = "btnEliminarEstilista";
-            btnEliminarEstilista.Size = new Size(107, 32);
+            btnEliminarEstilista.Size = new Size(153, 53);
             btnEliminarEstilista.TabIndex = 5;
             btnEliminarEstilista.Text = "- Eliminar";
             btnEliminarEstilista.UseVisualStyleBackColor = false;
@@ -107,16 +101,15 @@
             // 
             // FormEstilistas
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(560, 388);
+            ClientSize = new Size(800, 647);
             Controls.Add(btnEliminarEstilista);
             Controls.Add(btnEditarEstilista);
             Controls.Add(btnAgregarEstilista);
             Controls.Add(txtBuscarEstilista);
             Controls.Add(label1);
             Controls.Add(dgvEstilistas);
-            Margin = new Padding(2, 2, 2, 2);
             Name = "FormEstilistas";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "FormEstilistas";

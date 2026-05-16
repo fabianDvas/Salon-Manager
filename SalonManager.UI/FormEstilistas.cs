@@ -213,6 +213,8 @@ namespace SalonManager.UI
             }
             return lista;
         }
+
+       
     }
 
     // El modelo interno debe tener la propiedad Telefono para evitar errores de compilación
