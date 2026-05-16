@@ -63,7 +63,7 @@ namespace SalonManager.UI
             }
             catch (Exception ex)
             {
-                // Si llegas aquí con el error de "Telefono", es que la clase Estilista en Datos no ha sido actualizada
+            
                 MessageBox.Show("Aviso de Estructura: " + ex.Message, "Sincronización de Base de Datos");
             }
         }
@@ -88,6 +88,20 @@ namespace SalonManager.UI
                 var nuevo = ventanaRegistro.Estilista;
                 if (nuevo == null || string.IsNullOrWhiteSpace(nuevo.Nombre)) return;
 
+               
+                //  Capa de Validación
+                
+                bool telefonoExiste = _context.Estilistas.Any(est => est.Telefono == nuevo.Telefono);
+
+                if (telefonoExiste && !string.IsNullOrWhiteSpace(nuevo.Telefono))
+                {
+                    MessageBox.Show("¡Atención! Ya existe un estilista con ese número de teléfono.", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return; 
+                }
+
+               
+                // Código de Persistencia 
+               
                 try
                 {
                     using (var connection = DatabaseHelper.GetConnection())
@@ -95,7 +109,6 @@ namespace SalonManager.UI
                         connection.Open();
                         var insert = connection.CreateCommand();
 
-                        // Aseguramos que el comando use @ para parámetros estándar de SQLite
                         insert.CommandText = "INSERT INTO Estilistas (Nombre, Telefono, Especialidad) VALUES (@n, @t, @e)";
                         insert.Parameters.AddWithValue("@n", nuevo.Nombre.Trim());
                         insert.Parameters.AddWithValue("@t", nuevo.Telefono ?? "");
@@ -109,7 +122,6 @@ namespace SalonManager.UI
                 }
                 catch (Exception ex)
                 {
-                    // Si sale el error de "no column named Telefono", revisa la clase Estilista en el proyecto de Datos
                     MessageBox.Show("Error al guardar: " + ex.Message, "Error de Base de Datos");
                 }
             }
@@ -123,6 +135,7 @@ namespace SalonManager.UI
             int id = Convert.ToInt32(dgvEstilistas.CurrentRow.Cells["ID"].Value);
             EstilistaSimulado? estilistaAEditar = null;
 
+            // Busca los datos actuales para cargarlos en la ventana
             using (var connection = DatabaseHelper.GetConnection())
             {
                 connection.Open();
@@ -151,6 +164,20 @@ namespace SalonManager.UI
 
                 if (ventanaRegistro.ShowDialog() == DialogResult.OK)
                 {
+                    // Validación
+                    
+                    string telefonoModificado = ventanaRegistro.Estilista.Telefono;
+
+                    // Verifica en tiempo real que OTRO estilista no tenga ya ese número
+                    bool duplicado = _context.Estilistas.Any(est => est.Id != id && est.Telefono == telefonoModificado);
+
+                    if (duplicado && !string.IsNullOrWhiteSpace(telefonoModificado))
+                    {
+                        MessageBox.Show("No se pudo actualizar: El teléfono ya pertenece a otro estilista.", "Error de Validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return; 
+                    }
+
+                    // Código de Persistencia 
                     using (var connection = DatabaseHelper.GetConnection())
                     {
                         connection.Open();
@@ -163,6 +190,7 @@ namespace SalonManager.UI
                         updateCmd.ExecuteNonQuery();
                     }
                     ActualizarTablaEstilistas();
+                    MessageBox.Show("Datos actualizados correctamente.", "Éxito");
                 }
             }
         }
